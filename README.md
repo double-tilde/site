@@ -29,3 +29,4 @@ My website, created with Hugo, for writing about web design and development.
 - [TOC highlighting](https://dakotaleemartinez.com/tutorials/how-to-add-active-highlight-to-table-of-contents/)
 - [Cubic beszier generator](https://www.cssportal.com/css-cubic-bezier-generator/)
 - [Jsonify for debugging](https://gohugo.io/functions/encoding/jsonify/)
+- [Deploying with github pages](https://gohugo.io/host-and-deploy/host-on-github-pages/)
