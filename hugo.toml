@@ -6,6 +6,10 @@ title = 'Double Tilde'
   home = ['html']
   section = ['html', 'rss']
 
+[caches]
+  [caches.images]
+    dir = ':cacheDir/images'
+
 [menus]
   [[menus.main]]
     name = 'About'
