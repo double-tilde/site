@@ -1,0 +1,18 @@
+{{ define "main" }}
+  <div class="container mx-auto px-4">
+    <section class="py-8">
+      <article class="article gs-3 mob-gs-1">
+        {{ .Content }}
+      </article>
+    </section>
+    <section class="py-8">
+      {{ partial "socials.html" . }}
+    </section>
+    <section class="py-8">
+      {{ partial "contact-form.html" . }}
+    </section>
+    <section class="py-8">
+      {{ partial "terms.html" (dict "taxonomy" "tags" "page" .) }}
+    </section>
+  </div>
+{{ end }}

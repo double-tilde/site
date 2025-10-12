@@ -1,0 +1,28 @@
+{{ define "main" }}
+  {{ .Content }}
+  <section class="container mx-auto px-4 py-8">
+    <div
+      class="relative container mx-auto px-6 py-8 solid-border dashed-border">
+      <h1>Hey, I'm Amy.</h1>
+      <p class="mb-0 text-big">
+        <strong>Double Tilde</strong> is my website where you'll find content
+        about web developement and tech in general. Enjoy!
+      </p>
+    </div>
+  </section>
+
+  <section class="container mx-auto px-4 py-8">
+    <h2>Recent Articles</h2>
+    {{ $featuredPages := where .Site.RegularPages "Type" "articles" }}
+    {{ $article := $featuredPages.ByDate.Reverse }}
+    <ul class="cards grid grid-col-2 g-6 mob-grid-col-1">
+      {{ range first 6 $article }}
+        {{ partial "card.html" . }}
+      {{ end }}
+    </ul>
+  </section>
+
+  <section class="container mx-auto px-4 py-8" aria-label="All tags">
+    {{ partial "all-tags.html" . }}
+  </section>
+{{ end }}

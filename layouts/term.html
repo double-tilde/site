@@ -1,0 +1,18 @@
+{{ define "main" }}
+  {{/* NOTE: used for showing tag pages with the articles that live under them */}}
+  {{ .Scratch.Set "prefix" "Tag: " }}
+  {{ partial "title-section.html" . }}
+
+  <section class="container mx-auto px-4 py-8">
+    {{ .Content }}
+    {{ $articles := .Pages.ByDate.Reverse }}
+    <ul class="cards grid grid-col-1 g-6">
+      {{ range $articles }}
+        {{ partial "card.html" . }}
+      {{ end }}
+    </ul>
+  </section>
+  <section class="container mx-auto px-4 py-8" aria-label="All tags">
+    {{ partial "all-tags.html" . }}
+  </section>
+{{ end }}

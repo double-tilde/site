@@ -1,0 +1,114 @@
+baseURL = 'https://double-tilde.com/'
+languageCode = 'en-gb'
+title = 'Double Tilde'
+
+[outputs]
+  home = ['html']
+  section = ['html', 'rss']
+
+[menus]
+  [[menus.main]]
+    name = 'About'
+    pageRef = 'about'
+    url = '/about'
+    weight = 10
+
+  [[menus.main]]
+    name = 'Articles'
+    pageRef="articles"
+    url = '/articles'
+    weight = 20
+
+  [[menus.main]]
+    name = 'Contact'
+    pageRef = 'contact'
+    url = '/about/#contact'
+    weight = 30
+
+  [[menus.footer]]
+    name = 'Home'
+    pageRef = 'home'
+    url = '/'
+    weight = 10
+
+  [[menus.footer]]
+    name = 'About'
+    pageRef = 'about'
+    url = '/about'
+    weight = 20
+
+  [[menus.footer]]
+    name = 'Back to Top'
+    pageRef = 'back to top'
+    url = '#main'
+    weight = 30
+
+  [[menus.footer]]
+    name = 'RSS Feed'
+    pageRef = 'rss feed'
+    url = '/articles/index.xml'
+    weight = 40
+
+[params]
+  [params.socials]
+    [[params.socials.entry]]
+      logo = "github"
+      label = "Github"
+      href = "https://github.com/double-tilde"
+
+    [[params.socials.entry]]
+      logo = "linkedin"
+      label = "Linkedin"
+      href = "https://www.linkedin.com/in/amy-dt/"
+
+    [[params.socials.entry]]
+      logo = "youtube"
+      label = "YouTube (coming soon)"
+      href = "https://youtube.com"
+
+    [[params.socials.entry]]
+      logo = "gitlab"
+      label = "Gitlab"
+      href = "https://gitlab.com/double-tilde"
+
+[module]
+  [module.hugoVersion]
+    extended = true
+    min = '0.146.0'
+
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.parser]
+      [markup.goldmark.parser.attribute]
+        title = true
+  [markup.highlight]
+    style = 'github-dark'
+
+[related]
+  includeNewer = true
+  threshold = 80
+  toLower = false
+  [[related.indices]]
+    applyFilter = false
+    cardinalityThreshold = 0
+    name = 'keywords'
+    pattern = ''
+    toLower = false
+    type = 'basic'
+    weight = 100
+  [[related.indices]]
+    applyFilter = false
+    cardinalityThreshold = 0
+    name = 'date'
+    pattern = ''
+    toLower = false
+    type = 'basic'
+    weight = 10
+  [[related.indices]]
+    applyFilter = false
+    cardinalityThreshold = 0
+    name = 'tags'
+    pattern = ''
+    toLower = false
+    type = 'basic'
+    weight = 80

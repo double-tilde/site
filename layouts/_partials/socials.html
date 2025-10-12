@@ -1,0 +1,16 @@
+<div class="socials" aria-label="socials">
+  <h2>Find Me Online</h2>
+  {{ range .Site.Params.socials.entry }}
+    <p class="flex items-center secondary-stroke">
+      <i class="mr-3" data-feather="{{ .logo }}"></i>
+      <a
+        href="{{ .href }}"
+        aria-label="{{ .label }}"
+        rel="external nofollow noopener noreferrer"
+        target="_blank"
+        class="styled-link flex items-center">
+        {{ .label }}<i class="mb-1" data-feather="arrow-up-right"></i>
+      </a>
+    </p>
+  {{ end }}
+</div>

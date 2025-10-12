@@ -1,0 +1,5 @@
+.utterances {
+  max-width: calc(100% + 8px);
+  width: calc(100% + 8px);
+  margin-left: -4px;
+}

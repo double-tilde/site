@@ -1,0 +1,45 @@
+input[type="text"],
+input[type="email"],
+input[type="name"],
+input[type="password"],
+input[type="date"],
+textarea {
+	display: block;
+	width: 100%;
+	margin-bottom: var(--root-6);
+	padding: var(--root-2) var(--root-4);
+	border: 1px solid var(--gray-clr);
+	border-radius: var(--root-1);
+	background-color: var(--gray-clr);
+	transition: var(--transition-default);
+}
+
+input[type="text"]:hover,
+input[type="text"]:focus,
+input[type="email"]:hover,
+input[type="email"]:focus,
+input[type="name"]:hover,
+input[type="name"]:focus,
+input[type="password"]:hover,
+input[type="password"]:focus,
+input[type="date"]:hover,
+input[type="date"]:focus,
+textarea:hover,
+textarea:focus {
+	outline: none;
+	border: 1px solid var(--secondary-clr);
+}
+
+label {
+	display: block;
+	margin-bottom: var(--root-1);
+	text-transform: uppercase;
+	letter-spacing: 1px;
+	font-size: 0.8rem;
+}
+
+label:has(+ input[required])::after,
+label:has(+ textarea[required])::after {
+	content: '*';
+	color: red;
+}

@@ -1,0 +1,16 @@
+{{ $result := transform.HighlightCodeBlock . }}
+{{ if or (eq .Type "text") (eq .Type "") }}
+  <figure class="code-figure">
+    {{ $result.Wrapped }}
+    <figcaption>
+      <span></span><button type="button" class="copy-code">copy</button>
+    </figcaption>
+  </figure>
+{{ else if .Type }}
+  <figure class="code-figure">
+    {{ $result.Wrapped }}
+    <figcaption>
+      {{ .Type }}<button type="button" class="copy-code">copy</button>
+    </figcaption>
+  </figure>
+{{ end }}

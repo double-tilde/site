@@ -1,0 +1,12 @@
+.feather {
+  height: 16px;
+  width: auto;
+  color: inherit;
+  stroke: inherit;
+}
+
+.feather.feather-arrow-up-right {
+  height: 12px;
+  width: auto;
+  stroke: var(--secondary-clr);
+}

@@ -1,0 +1,32 @@
+aside.article-menu {
+  position: sticky;
+  height: 100vh;
+  top: var(--root-8);
+
+  a {
+    display: block;
+    color: var(--text-clr);
+    opacity: 0.7;
+    text-decoration: none;
+    padding: var(--root-1) 0;
+    transition: var(--transition-default);
+  }
+
+  a:hover,
+  a:focus {
+    opacity: 1;
+  }
+
+  a.toc-active {
+    color: var(--secondary-clr);
+    opacity: 1;
+  }
+}
+
+@media screen and (max-width: 992px) {
+  aside.article-menu {
+    position: relative;
+    height: auto;
+    top: var(--root-8);
+  }
+}

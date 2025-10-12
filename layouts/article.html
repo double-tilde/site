@@ -1,0 +1,43 @@
+{{ define "main" }}
+  {{ partial "title-section.html" . }}
+  <section class="container mx-auto px-4 py-8">
+    <div class="mx-auto grid grid-col-4 mob-grid-col-1 g-6 mob-g-0">
+      {{ $gridWidth := "gs-4" }}
+      {{ if strings.Contains .TableOfContents "li" }}
+        {{ $gridWidth = "gs-3" }}
+      {{ end }}
+      <article class="article {{ $gridWidth }} mob-gs-1">
+        {{ .Content }}
+        {{ partial "thank-you.html" . }}
+      </article>
+      {{ if strings.Contains .TableOfContents "li" }}
+        <aside class="article-menu gs-1 mob-gs-1">
+          <div class="article-menu-container">
+            <h3>Outline</h3>
+            {{ .TableOfContents }}
+          </div>
+        </aside>
+      {{ end }}
+    </div>
+    {{ $related := .Site.RegularPages.Related . | first 2 }}
+    {{ if $related }}
+      <div class="pt-8">
+        <p class="primary-clr little-link">Related Articles</p>
+        <ul class="cards grid grid-col-2 g-6 mob-grid-col-1">
+          {{ with $related }}
+            {{ range . }}
+              {{ partial "card.html" . }}
+            {{ end }}
+          {{ end }}
+        </ul>
+      </div>
+    {{ end }}
+  </section>
+  {{ if .Params.comments }}
+    <section class="container mx-auto px-4 py-8">
+      <hr />
+      <p class="flex justify-end little-link">Let me know what you think :)</p>
+      {{ partial "utterances.html" . }}
+    </section>
+  {{ end }}
+{{ end }}

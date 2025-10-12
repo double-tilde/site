@@ -1,0 +1,118 @@
+@font-face {
+  font-family: 'Karla Variable';
+  font-style: normal;
+  ont-display: swap;
+  font-weight: 200 800;
+  src: url(https://cdn.jsdelivr.net/fontsource/fonts/karla:vf@latest/latin-wght-normal.woff2) format('woff2-variations');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+@font-face {
+  font-family: 'DM Serif Display';
+  font-style: normal;
+  font-display: swap;
+  font-weight: 400;
+  src: url(https://cdn.jsdelivr.net/fontsource/fonts/dm-serif-display@latest/latin-400-normal.woff2) format('woff2'), url(https://cdn.jsdelivr.net/fontsource/fonts/dm-serif-display@latest/latin-400-normal.woff) format('woff');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+@font-face {
+  font-family: 'Geist Mono Variable';
+  font-style: normal;
+  font-display: swap;
+  font-weight: 100 900;
+  src: url(https://cdn.jsdelivr.net/fontsource/fonts/geist-mono:vf@latest/latin-wght-normal.woff2) format('woff2-variations');
+  unicode-range: U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD;
+}
+
+:root {
+  --root-0: 0;
+  --root-1: 0.25rem;
+  --root-2: 0.5rem;
+  --root-3: 0.75rem;
+  --root-4: 1rem;
+  --root-5: 1.5rem;
+  --root-6: 2rem;
+  --root-7: 2.5rem;
+  --root-8: 3rem;
+  --root-9: 3.5rem;
+  --root-10: 4rem;
+  --root-11: 5rem;
+  --root-12: 6rem;
+
+  --root--1: -0.25rem;
+  --root--2: -0.5rem;
+  --root--3: -0.75rem;
+  --root--4: -1rem;
+  --root--5: -1.5rem;
+  --root--6: -2rem;
+  --root--7: -2.5rem;
+  --root--8: -3rem;
+  --root--9: -3.5rem;
+  --root--10: -4rem;
+  --root--11: -5rem;
+  --root--12: -6rem;
+
+  --rel-0: 0;
+  --rel-1: 0.25em;
+  --rel-2: 0.5em;
+  --rel-3: 0.75em;
+  --rel-4: 1em;
+  --rel-5: 1.5em;
+  --rel-6: 2em;
+  --rel-7: 2.5em;
+  --rel-8: 3em;
+  --rel-9: 3.5em;
+  --rel-10: 4em;
+  --rel-11: 5em;
+  --rel-12: 6em;
+
+  --rel--1: -0.25em;
+  --rel--2: -0.5em;
+  --rel--3: -0.75em;
+  --rel--4: -1em;
+  --rel--5: -1.5em;
+  --rel--6: -2em;
+  --rel--7: -2.5em;
+  --rel--8: -3em;
+  --rel--9: -3.5em;
+  --rel--10: -4em;
+  --rel--11: -5em;
+  --rel--12: -6em;
+
+  --primary-clr: rgb(35, 100, 170);
+  --secondary-clr: rgb(234, 115, 23);
+  --primary-accent-clr: rgb(35, 100, 170);
+  --secondary-accent-clr: rgb(61, 165, 217);
+
+  --gray-clr: rgb(235, 235, 235);
+  --text-clr: rgb(7, 20, 34);
+  --bg-clr: rgb(245, 245, 245);
+
+  --silver-clr: rgb(132, 143, 165);
+  --green-clr: rgb(95, 211, 147);
+  --white-clr: rgb(255, 255, 255);
+  --black-clr: rgb(0, 0, 0);
+
+  --container: 64rem;
+
+  --body-font: 'Karla Variable', sans-serif;
+  --heading-font: 'DM Serif Display', serif;
+  --mono-font: 'Geist Mono Variable', monospace;
+
+  --main-height: calc(100svh - 100px);
+  --transition-default: 150ms all ease;
+  --shadow-default: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+  --linear-gradient-default: linear-gradient(transparent, #00000099, #000000ee);
+}
+
+.dark:root {
+  --primary-clr: rgb(234, 115, 23);
+  --secondary-clr: rgb(254, 198, 1);
+  --primary-accent-clr: rgb(35, 100, 170);
+  --secondary-accent-clr: rgb(61, 165, 217);
+
+  --gray-clr: rgb(19, 31, 44);
+  --text-clr: rgb(255, 255, 255);
+  --bg-clr: rgb(7, 20, 34);
+}

@@ -1,0 +1,30 @@
+.tag {
+	display: inline-block;
+
+	>a {
+		padding: var(--root-1) var(--root-2);
+		background-color: var(--gray-clr);
+		border-radius: var(--root-1);
+		text-decoration: none;
+		transition: var(--transition-default);
+	}
+
+	>a:hover,
+	>a:focus {
+		background-color: var(--secondary-clr);
+		color: var(--bg-clr);
+	}
+}
+
+.tag.tag-light {
+	a {
+		background-color: #FFFFFF33;
+		color: #ffffff;
+	}
+
+	>a:hover,
+	>a:focus {
+		background-color: #FFFFFF66;
+		color: #ffffff;
+	}
+}

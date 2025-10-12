@@ -1,0 +1,28 @@
+<footer id="footer">
+  <nav
+    class="container mx-auto flex items-center justify-between g-6 py-6 px-4 mob-flex-col mob-justify-start"
+    aria-label="Footer navigation">
+    <p>&copy; Double Tilde {{ now.Year }}.</p>
+    <ul class="flex items-center justify-end">
+      {{ $currentPage := . }}
+      {{ range .Site.Menus.footer }}
+        <li>
+          <a
+            class="little-link {{ if or ($currentPage.IsMenuCurrent "footer" .) ($currentPage.HasMenuCurrent "footer" .) }}
+              active
+            {{ end }}
+        "
+            href="{{ .URL }}">
+            {{ .Name }}
+          </a>
+        </li>
+      {{ end }}
+      <li>
+        <button class="little-link" type="button" id="dark-mode-toggle">
+          Light mode
+        </button>
+      </li>
+      <span class="dt pl-4 secondary-clr">~~</span>
+    </ul>
+  </nav>
+</footer>

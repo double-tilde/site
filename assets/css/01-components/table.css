@@ -1,0 +1,27 @@
+table {
+	width: 100%;
+
+	th {
+		padding: var(--root-1) var(--root-4);
+		background-color: var(--bg-clr);
+		text-align: left;
+		font-weight: 600;
+	}
+
+	td {
+		padding: var(--root-1) var(--root-4);
+		border: 1px solid var(--bg-clr);
+		text-align: left;
+	}
+
+	tr:nth-child(even) {
+		background-color: #00000006;
+	}
+}
+
+.dark table {
+
+	tr:nth-child(even) {
+		background-color: #ffffff08;
+	}
+}

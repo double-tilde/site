@@ -1,0 +1,25 @@
+.skip-to-main {
+	position: absolute;
+	top: 0;
+	left: 50%;
+	transform: translateX(-50%);
+	z-index: 9999;
+	padding: 1em;
+	background-color: var(--gray-clr);
+	color: var(--text-clr);
+	font-size: var(--root-4);
+	text-decoration: none;
+	opacity: 0;
+	pointer-events: none;
+	transition: var(--transition-default);
+}
+
+.skip-to-main:focus {
+	top: var(--root-4);
+	opacity: 1;
+}
+
+.skip-to-main:hover {
+	text-decoration: underline;
+	color: var(--secondary-clr);
+}

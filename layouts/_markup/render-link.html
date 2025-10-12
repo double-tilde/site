@@ -1,0 +1,11 @@
+{{- $u := urls.Parse .Destination -}}
+<a
+  href="{{ .Destination | safeURL }}"
+  {{- with .Title }}title="{{ . }}"{{ end -}}
+  {{- if $u.IsAbs }}rel="external nofollow noopener noreferrer" target="_blank"{{ end -}}
+  class="flex-inline items-center">
+  {{- with .Text }}
+    {{ . }}<i class="mb-1" data-feather="arrow-up-right"></i>
+  {{ end -}}
+</a>
+{{- /* chomp trailing newline */ -}}

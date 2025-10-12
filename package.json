@@ -1,0 +1,18 @@
+{
+  "name": "Double Tilde Site",
+  "version": "1.0.0",
+  "scripts": {
+    "clean": "rm -rf public resources",
+    "kill": "killall -9 hugo",
+    "start:hugo": "hugo server -D",
+    "start:quiet": "hugo server -D --quiet",
+    "launch": "$BROWSER http://localhost:1313",
+    "build": "hugo",
+    "reset": "npm run clean && npm run start:hugo & sleep 1 && npm run launch"
+  },
+  "devDependencies": {
+    "prettier": "3.6.2",
+    "prettier-plugin-go-template": "^0.0.15",
+    "prettier-plugin-toml": "^2.0.6"
+  }
+}

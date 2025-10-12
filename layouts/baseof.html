@@ -1,0 +1,21 @@
+<!doctype html>
+<html
+  class="dark"
+  lang="{{ site.Language.LanguageCode }}"
+  dir="{{ or site.Language.LanguageDirection `ltr` }}">
+  <head>
+    {{ partial "head.html" . }}
+  </head>
+  <body>
+    {{ partial "skip-to-main.html" . }}
+    {{ partial "header.html" . }}
+    <main id="main" class="main transparent animate">
+      {{ block "main" . }}{{ end }}
+    </main>
+    {{ partial "footer.html" . }}
+    {{ partial "toast.html" . }}
+    <script>
+      feather.replace();
+    </script>
+  </body>
+</html>

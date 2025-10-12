@@ -1,0 +1,9 @@
+<ul class="flex items-center justify-center g-2 flex-wrap">
+  {{ range $name, $items := .Site.Taxonomies.tags }}
+    {{ with $.Site.GetPage (printf "/tags/%s" $name) }}
+      <li class="tag tag-light little-link">
+        <a href="{{ .RelPermalink }}">#{{ $name }} - {{ $items.Count }}</a>
+      </li>
+    {{ end }}
+  {{ end }}
+</ul>

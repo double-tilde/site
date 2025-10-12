@@ -1,0 +1,260 @@
+article {
+  background-color: var(--gray-clr);
+  border-radius: var(--root-1);
+  padding: var(--root-6);
+
+  >*:first-child {
+    margin-top: 0;
+  }
+
+  >p:first-child::first-line {
+    color: var(--secondary-clr);
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    margin-top: var(--rel-5);
+    margin-bottom: var(--rel-3);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: var(--root-4);
+
+    a {
+      display: none;
+      text-decoration: none;
+      color: var(--secondary-clr);
+    }
+  }
+
+  h1:hover,
+  h1:focus,
+  h2:hover,
+  h2:focus,
+  h3:hover,
+  h3:focus,
+  h4:hover,
+  h4:focus,
+  h5:hover,
+  h5:focus,
+  h6:hover,
+  h6:focus {
+    a {
+      display: block;
+    }
+  }
+
+  h1 {
+    font-size: var(--root-10);
+  }
+
+  h2 {
+    font-size: var(--root-8);
+  }
+
+  h3 {
+    font-size: var(--root-6);
+  }
+
+  h4 {
+    font-size: var(--root-5);
+  }
+
+  h5 {
+    font-size: var(--root-4);
+  }
+
+  h6 {
+    font-size: var(--root-3);
+  }
+
+  ul,
+  ol {
+    padding: revert;
+    list-style: revert;
+
+    ::marker {
+      color: var(--secondary-clr);
+    }
+  }
+
+  ul:has(input[type="checkbox"]),
+  ol:has(input[type="checkbox"]) {
+    padding: 0;
+    list-style: none;
+  }
+
+  p,
+  ul,
+  ol {
+    margin-bottom: var(--root-4);
+  }
+
+  pre,
+  blockquote,
+  table {
+    margin: var(--root-6) 0;
+  }
+
+  p>code,
+  li>code {
+    display: inline-block;
+    padding: 0 4px;
+    opacity: 0.8;
+    background-color: var(--bg-clr);
+    border-radius: var(--root-1);
+  }
+
+  pre {
+    padding: var(--root-8) var(--root-4) var(--root-4);
+
+    code {
+      text-wrap: wrap;
+
+    }
+
+    span {
+      color: var(--white-clr);
+    }
+  }
+
+  figure.code-figure {
+    position: relative;
+
+    figcaption {
+      position: absolute;
+      content: '';
+      top: 0;
+      left: 0;
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: var(--root-2) var(--root-4);
+      background: linear-gradient(to right, var(--silver-clr), transparent);
+      border-radius: var(--root-1) var(--root-1) 0 0;
+    }
+
+    figcaption,
+    button {
+      font-size: 0.8rem;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      font-weight: 600;
+    }
+
+    button {
+      color: var(--secondary-clr);
+    }
+  }
+
+  figure.hidden-figure {
+    position: relative;
+    overflow: hidden;
+    background-color: #000000aa;
+    border-radius: var(--root-1);
+    z-index: 0;
+
+    .background {
+      position: absolute;
+      filter: blur(4px) grayscale(1);
+      opacity: 0.2;
+      pointer-events: none;
+      z-index: -1;
+      object-fit: cover;
+      width: 100%;
+      height: 100%;
+    }
+
+    figcaption {
+      position: absolute;
+      pointer-events: none;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      padding: var(--root-8) var(--root-4) var(--root-4);
+      border-radius: 0 0 var(--root-1) var(--root-1);
+      background: var(--linear-gradient-default);
+      color: var(--secondary-clr);
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      opacity: 0;
+      transition: var(--transition-default);
+    }
+  }
+
+  figure.hidden-figure:hover,
+  figure.hidden-figure:focus {
+    figcaption {
+      opacity: 1;
+    }
+  }
+
+  pre,
+  img {
+    width: fit-content;
+    border-radius: var(--root-1);
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .copy-code {
+    min-width: unset;
+    border: none;
+    padding: 0;
+  }
+
+  .copy-code:hover,
+  .copy-code:focus {
+    border: none;
+    min-width: unset;
+    opacity: 0.7;
+  }
+
+  blockquote {
+    position: relative;
+    padding: var(--root-4);
+    border: 2px solid var(--primary-accent-clr);
+    font-style: italic;
+
+    p:first-child:has(em:first-child strong:first-child),
+    p:last-child {
+      margin-bottom: 0;
+    }
+
+    p:first-child em:first-child strong:first-child {
+      position: absolute;
+      top: var(--root--3);
+      right: var(--root-4);
+      padding: 0 var(--root-2);
+      background-color: var(--gray-clr);
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      font-size: 0.8rem;
+      font-style: normal;
+      color: var(--secondary-clr);
+    }
+
+  }
+
+  blockquote:nth-of-type(even) {
+    border: 2px solid var(--secondary-accent-clr);
+  }
+
+  blockquote:before {
+    position: absolute;
+    display: block;
+    content: '~~';
+    bottom: -6px;
+    left: var(--root-4);
+    padding: 0 var(--root-2);
+    background-color: var(--gray-clr);
+    color: var(--secondary-clr);
+    line-height: 10px;
+  }
+
+}

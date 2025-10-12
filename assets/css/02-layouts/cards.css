@@ -1,0 +1,40 @@
+.card {
+  position: relative;
+  background-color: var(--gray-clr);
+  border-radius: var(--root-1);
+
+  >a {
+    padding: var(--root-6);
+    text-decoration: none;
+
+    >:last-child {
+      margin-bottom: 0;
+      padding-bottom: 0;
+    }
+
+    span {
+      color: var(--secondary-clr);
+    }
+  }
+}
+
+.card:before {
+  position: absolute;
+  content: "";
+  opacity: 0;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  border: 2px dashed var(--primary-accent-clr);
+  border-radius: var(--root-1);
+  transition: var(--transition-default);
+  pointer-events: none;
+}
+
+.card:hover:before,
+.card:focus:before {
+  top: var(--root--1);
+  left: var(--root--1);
+  opacity: 1;
+}

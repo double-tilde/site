@@ -1,0 +1,53 @@
+{{ $bgFolder := "static/images/backgrounds" }}
+{{ $bgOutputFolder := "/images/backgrounds/" }}
+{{ $files := readDir $bgFolder }}
+{{ $allowedExt := slice "jpg" "jpeg" "png" "gif" "webp" }}
+{{ $images := slice }}
+
+{{ range $files }}
+  {{ $ext := lower (path.Ext .Name | strings.TrimPrefix ".") }}
+  {{ if in $allowedExt $ext }}
+    {{ $images = $images | append . }}
+  {{ end }}
+{{ end }}
+
+{{ $count := len $images }}
+{{ $randIdx := (math.Rand | mul $count) | int }}
+{{ $selected := (index $images $randIdx).Name }}
+{{ $bgURL := printf "%s%s" $bgOutputFolder $selected }}
+
+
+<section class="title-section" style="--background-image: url('{{ $bgURL }}');">
+  <div class="container mx-auto px-4 py-8">
+    <div class="py-8">
+      <h1 class="white-clr {{ if (not .Params.date) }}mb-0{{ end }}">
+        {{ .Scratch.Get "prefix" }}{{ .Title }}
+      </h1>
+
+      {{ $dateMachine := .Date | time.Format "2006-01-02T15:04:05-07:00" }}
+      {{ $dateHuman   := .Date | time.Format ":date_long" }}
+
+      {{ if .Params.date }}
+        <div class="mb-4 flex flex-wrap g-4 white-clr">
+          <span
+            >Published:
+            <time datetime="{{ $dateMachine }}">{{ $dateHuman }}</time></span
+          >
+          <span class="dt secondary-clr">~~</span>
+          <span>{{ .ReadingTime }} minute read</span>
+        </div>
+      {{ end }}
+
+      {{ if .Params.tags }}
+        <ul class="flex items-center g-4">
+          {{ range .Params.tags }}
+            {{ $link := (printf "/tags/%s" .) }}
+            <li class="tag tag-light little-link">
+              <a href="{{ $link }}">#{{ . }}</a>
+            </li>
+          {{ end }}
+        </ul>
+      {{ end }}
+    </div>
+  </div>
+</section>

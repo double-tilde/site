@@ -1,0 +1,37 @@
+main button,
+main input[type="submit"] {
+	display: block;
+	min-width: var(--root-12);
+	padding: var(--root-2) var(--root-4);
+	border: 1px solid var(--primary-clr);
+	border-radius: var(--root-1);
+	text-transform: uppercase;
+	letter-spacing: 1px;
+	font-size: 0.8rem;
+	font-weight: 600;
+	background-color: transparent;
+	color: var(--primary-clr);
+	transition: var(--transition-default);
+}
+
+main button:hover,
+main button:focus,
+main input[type="submit"]:hover,
+main input[type="submit"]:focus {
+	border-color: var(--secondary-clr);
+	color: var(--secondary-clr);
+}
+
+main button.send,
+main input[type="submit"].send {
+	border: 1px solid var(--green-clr);
+	color: var(--green-clr);
+}
+
+main button.send:hover,
+main button.send:focus,
+main input[type="submit"].send:hover,
+main input[type="submit"].send:focus {
+	background-color: var(--green-clr);
+	color: var(--black-clr);
+}

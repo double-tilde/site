@@ -1,0 +1,18 @@
+<li class="card">
+  <a class="h-100 flex flex-col" href="{{ .RelPermalink }}">
+    <h2>{{ .LinkTitle }}</h2>
+    <p>{{ .Summary }}</p>
+    <div class="mt-auto flex items-center justify-between g-4">
+      {{ $dateMachine := .Date | time.Format "2006-01-02T15:04:05-07:00" }}
+      {{ $dateHuman   := .Date | time.Format "2 Jan 2006" }}
+      <time class="secondary-accent-clr little-link" datetime="{{ $dateMachine }}"
+        >{{ $dateHuman }}</time
+      >
+      <div class="flex items-center justify-end g-4">
+        {{ range .Params.tags }}
+          <span class="little-link">{{ . }}</span>
+        {{ end }}
+      </div>
+   </div>
+  </a>
+</li>

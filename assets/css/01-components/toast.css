@@ -1,0 +1,40 @@
+@keyframes pop {
+	0% {
+		opacity: 0;
+		bottom: var(--root-7);
+	}
+
+	15% {
+		opacity: 1;
+		bottom: var(--root-8);
+	}
+
+	85% {
+		opacity: 1;
+		bottom: var(--root-8);
+	}
+
+	100% {
+		opacity: 0;
+		bottom: var(--root-7);
+	}
+}
+
+
+.toast {
+	position: fixed;
+	right: var(--root-8);
+	padding: var(--root-4);
+	border-radius: var(--root-1);
+	background-color: var(--gray-clr);
+	box-shadow: var(--shadow-default);
+	opacity: 0;
+	bottom: var(--root-7);
+	pointer-events: none;
+}
+
+.pop {
+	animation-name: pop;
+	animation-duration: 3s;
+	animation-direction: forwards;
+}
