@@ -16,12 +16,13 @@ My website, created with Hugo, for writing about web design and development.
 
 ## Running locally
 
+- You will need to install Go and Hugo on your computer to use this repository.
 - If you clone this repository, use `npm run reset` to remove the public/ directory and automatically open a new browser tab at the port 1313.
-- `npm run kill` kills any hugo process currently running on your computer
-- `npm run hugo` builds the site and places the ouptput in the public/ directory
-- Check the `package.json` file for more commands
+- `npm run kill` kills any hugo process currently running on your computer.
+- `npm run hugo` builds the site and places the ouptput in the public/ directory.
+- Check the `package.json` file for more commands.
 
-#### Useful Articles / documentation
+#### Useful Articles / Documentation (for Hugo, styling, etc)
 
 - [Article about setting up hugo and Neovim](https://kaibreucker.dev/en/content/foss/nvim/frameworks/hugo-in-nvim/)
 - [Article about using menus in hugo](https://harrycresswell.com/writing/menus-in-hugo/)

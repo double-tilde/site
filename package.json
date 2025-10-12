@@ -2,7 +2,7 @@
   "name": "Double Tilde Site",
   "version": "1.0.0",
   "scripts": {
-    "clean": "rm -rf public resources",
+    "clean": "rm -rf public",
     "kill": "killall -9 hugo",
     "start:hugo": "hugo server -D",
     "start:quiet": "hugo server -D --quiet",
