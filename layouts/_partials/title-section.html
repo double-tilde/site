@@ -19,7 +19,7 @@
 
 <section class="title-section" style="--background-image: url('{{ $bgURL }}');">
   <div class="container mx-auto px-4 py-8">
-    <div class="py-8">
+    <div class="py-8 mob-py-0">
       <h1 class="white-clr {{ if (not .Params.date) }}mb-0{{ end }}">
         {{ .Scratch.Get "prefix" }}{{ .Title }}
       </h1>
@@ -28,7 +28,7 @@
       {{ $dateHuman   := .Date | time.Format ":date_long" }}
 
       {{ if .Params.date }}
-        <div class="mb-4 flex flex-wrap g-4 white-clr">
+        <div class="mb-4 flex flex-wrap g-4 mob-g-2 white-clr">
           <span
             >Published:
             <time datetime="{{ $dateMachine }}">{{ $dateHuman }}</time></span

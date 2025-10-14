@@ -3,7 +3,7 @@
   {{ range .Site.Menus.main }}
     <li>
       <a
-        class="little-link px-4 py-2 {{ if or ($currentPage.IsMenuCurrent "main" .) ($currentPage.HasMenuCurrent "main" .) }}
+        class="little-link px-4 py-2 mob-px-3 mob-py-1 {{ if or ($currentPage.IsMenuCurrent "main" .) ($currentPage.HasMenuCurrent "main" .) }}
           active
         {{ end }}
         "

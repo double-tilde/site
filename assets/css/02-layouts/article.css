@@ -258,3 +258,35 @@ article {
   }
 
 }
+
+@media screen and (max-width: 992px) {
+  article {
+    background-color: var(--gray-clr);
+    border-radius: 0;
+    padding: var(--root-4);
+
+    h1 {
+      font-size: var(--root-9);
+    }
+
+    h2 {
+      font-size: var(--root-7);
+    }
+
+    h3 {
+      font-size: var(--root-5);
+    }
+
+    h4 {
+      font-size: var(--root-4);
+    }
+
+    h5 {
+      font-size: var(--root-3);
+    }
+
+    h6 {
+      font-size: var(--root-2);
+    }
+  }
+}

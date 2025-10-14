@@ -1,6 +1,6 @@
 {{ define "main" }}
   {{ partial "title-section.html" . }}
-  <section class="container mx-auto px-4 py-8">
+  <section class="container mx-auto px-4 py-8 mob-px-0 mob-pt-0">
     <div class="mx-auto grid grid-col-4 mob-grid-col-1 g-6 mob-g-0">
       {{ $gridWidth := "gs-4" }}
       {{ if strings.Contains .TableOfContents "li" }}
@@ -11,7 +11,7 @@
         {{ partial "thank-you.html" . }}
       </article>
       {{ if strings.Contains .TableOfContents "li" }}
-        <aside class="article-menu gs-1 mob-gs-1">
+        <aside class="article-menu gs-1 mob-gs-1 mob-px-4">
           <div class="article-menu-container">
             <h3>Outline</h3>
             {{ .TableOfContents }}

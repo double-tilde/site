@@ -38,3 +38,12 @@
   left: var(--root--1);
   opacity: 1;
 }
+
+@media screen and (max-width: 992px) {
+  .card {
+
+    >a {
+      padding: var(--root-4);
+    }
+  }
+}

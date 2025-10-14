@@ -2,7 +2,7 @@
   <a class="h-100 flex flex-col" href="{{ .RelPermalink }}">
     <h2>{{ .LinkTitle }}</h2>
     <p>{{ .Summary }}</p>
-    <div class="mt-auto flex items-center justify-between g-4">
+    <div class="mt-auto flex items-center justify-between g-4 mob-flex-col mob-items-start">
       {{ $dateMachine := .Date | time.Format "2006-01-02T15:04:05-07:00" }}
       {{ $dateHuman   := .Date | time.Format "2 Jan 2006" }}
       <time class="secondary-accent-clr little-link" datetime="{{ $dateMachine }}"
