@@ -92,6 +92,11 @@ article {
   ul,
   ol {
     margin-bottom: var(--root-4);
+
+    ul,
+    ol {
+      margin-bottom: 0;
+    }
   }
 
   pre,
@@ -109,11 +114,19 @@ article {
     border-radius: var(--root-1);
   }
 
+  pre,
+  img {
+    width: fit-content;
+    border-radius: var(--root-1);
+    margin-left: auto;
+    margin-right: auto;
+  }
+
   pre {
     padding: var(--root-8) var(--root-4) var(--root-4);
 
     code {
-      text-wrap: wrap;
+      text-wrap: no-wrap;
 
     }
 
@@ -149,6 +162,17 @@ article {
 
     button {
       color: var(--secondary-clr);
+    }
+
+    pre {
+      background-color: #0d1117;
+      overflow: auto;
+    }
+
+    .highlight pre,
+    pre,
+    code {
+      width: 100%;
     }
   }
 
@@ -192,14 +216,6 @@ article {
     figcaption {
       opacity: 1;
     }
-  }
-
-  pre,
-  img {
-    width: fit-content;
-    border-radius: var(--root-1);
-    margin-left: auto;
-    margin-right: auto;
   }
 
   .copy-code {

@@ -6,9 +6,15 @@ export function copyCode() {
   copyButtons.forEach((button) => {
     button.addEventListener('click', (e) => {
       let codeFigure = e.target.closest('.code-figure');
-      let code = codeFigure.querySelector('.highlight > pre > code');
-      let codeAsText = code.textContent;
-      navigator.clipboard.writeText(decodeURIComponent(codeAsText));
+      let code = codeFigure.querySelector('pre > code');
+      const cleanCode = code.cloneNode(true);
+
+      cleanCode
+        .querySelectorAll('span[style*="user-select:none"]')
+        .forEach((s) => s.remove());
+
+      let codeAsText = cleanCode.textContent;
+      navigator.clipboard.writeText(codeAsText);
       toast('Code copied!');
     });
   });
