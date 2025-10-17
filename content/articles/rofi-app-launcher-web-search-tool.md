@@ -1,6 +1,6 @@
 +++
 date = '2025-10-17'
-updated = '2025-10-18'
+updated = '2025-10-17'
 url = '/:year-:month-:day-:contentbasename/'
 draft = false
 title = 'Rofi as an App Launcher and Web Search Tool'
