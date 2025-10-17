@@ -1,21 +1,25 @@
 @keyframes pop {
 	0% {
 		opacity: 0;
+		visibility: hidden;
 		bottom: var(--root-7);
 	}
 
 	15% {
 		opacity: 1;
+		visibility: visible;
 		bottom: var(--root-8);
 	}
 
 	85% {
 		opacity: 1;
+		visibility: visible;
 		bottom: var(--root-8);
 	}
 
 	100% {
 		opacity: 0;
+		visibility: hidden;
 		bottom: var(--root-7);
 	}
 }
@@ -29,6 +33,7 @@
 	background-color: var(--gray-clr);
 	box-shadow: var(--shadow-default);
 	opacity: 0;
+	visibility: hidden;
 	bottom: var(--root-7);
 	pointer-events: none;
 }
