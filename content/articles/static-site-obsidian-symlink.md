@@ -1,5 +1,7 @@
 +++
-date = '2025-09-30'
+date = '2025-10-01'
+updated = '2025-10-01'
+url = '/:year-:month-:day-:contentbasename/'
 draft = false
 title = 'Write Your Static Site Blog with Obsidian'
 summary = 'When I decided to create this website, I knew I wanted to use a static site generator, I decided to use Hugo, but I wanted to be able to write the content inside Obsidian and not my code editor.'

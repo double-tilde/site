@@ -27,6 +27,7 @@ aside.article-menu {
   aside.article-menu {
     position: relative;
     height: auto;
-    top: var(--root-8);
+    top: 0;
+    padding-top: var(--root-8);
   }
 }

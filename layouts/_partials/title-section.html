@@ -33,6 +33,17 @@
             >Published:
             <time datetime="{{ $dateMachine }}">{{ $dateHuman }}</time></span
           >
+          {{ $updatedMachine := .Params.updated | time.Format "2006-01-02T15:04:05-07:00" }}
+          {{ $updatedHuman   := .Params.updated | time.Format ":date_long" }}
+          {{ if not (eq $dateHuman $updatedHuman) }}
+            <span class="dt secondary-clr">~~</span>
+            <span
+              >Updated:
+              <time datetime="{{ $updatedMachine }}"
+                >{{ $updatedHuman }}</time
+              ></span
+            >
+          {{ end }}
           <span class="dt secondary-clr">~~</span>
           <span>{{ .ReadingTime }} minute read</span>
         </div>

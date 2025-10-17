@@ -125,11 +125,6 @@ article {
   pre {
     padding: var(--root-8) var(--root-4) var(--root-4);
 
-    code {
-      text-wrap: no-wrap;
-
-    }
-
     span {
       color: var(--white-clr);
     }
@@ -137,6 +132,7 @@ article {
 
   figure.code-figure {
     position: relative;
+    background-color: #0d1117;
 
     figcaption {
       position: absolute;
@@ -165,21 +161,28 @@ article {
     }
 
     pre {
-      background-color: #0d1117;
-      overflow: auto;
-    }
-
-    .highlight pre,
-    pre,
-    code {
       width: 100%;
+      overflow: scroll;
+      margin-left: 0;
+      margin-right: 0;
+
+      code {
+        text-wrap: nowrap;
+      }
+    }
+  }
+
+  @media screen and (max-width: 992px) {
+    figure.code-figure {
+      pre {
+        width: calc(100vw - var(--root-8));
+      }
     }
   }
 
   figure.hidden-figure {
     position: relative;
     overflow: hidden;
-    background-color: #000000aa;
     border-radius: var(--root-1);
     z-index: 0;
 
