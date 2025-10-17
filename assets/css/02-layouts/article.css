@@ -133,6 +133,7 @@ article {
   figure.code-figure {
     position: relative;
     background-color: #0d1117;
+    border-radius: var(--root-1);
 
     figcaption {
       position: absolute;
