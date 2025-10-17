@@ -36,6 +36,7 @@ a {
 article a[class] {
   display: inline-flex;
   position: relative;
+  margin-right: 5px;
   text-decoration: none;
   color: var(--text-clr);
   min-height: 32px;
