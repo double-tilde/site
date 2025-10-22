@@ -122,3 +122,8 @@ hr {
 hr:nth-of-type(even) {
   background-color: var(--secondary-accent-clr);
 }
+
+::selection {
+  color: var(--primary-accent-clr);
+  background-color: var(--secondary-accent-clr);
+}
