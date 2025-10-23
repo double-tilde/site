@@ -1,0 +1,15 @@
+{{ $exampleName := .Get 0 }}
+{{ $page := .Site.GetPage (printf "examples/%s" $exampleName) }}
+{{ if $page }}
+  {{ with $page.Content | findRE "(?s)<section class=\"code-example\">.*?</section>" }}
+    <figure class="code-example-figure">
+      {{ index . 0 | safeHTML }}
+      <figcaption>
+        Example
+        <a href="/examples/code-example-{{ $exampleName }}">Learn more</a>
+      </figcaption>
+    </figure>
+  {{ end }}
+{{ else }}
+  <p>Code example "{{ $exampleName }}" not found.</p>
+{{ end }}

@@ -1,7 +1,7 @@
 +++
 date = '2025-10-17'
 updated = '2025-10-17'
-url = '/:year-:month-:day-:contentbasename/'
+url = '/:section/:year-:month-:day-:contentbasename/'
 draft = false
 title = 'Rofi as an App Launcher and Web Search Tool'
 summary = "Rather than having different shortcuts for these two purposes I use one script to handle both situations. Here's how you can do the same."

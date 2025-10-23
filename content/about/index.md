@@ -1,5 +1,5 @@
 +++
-date = '2025-09-24'
+date = '2025-10-01'
 title = 'About'
 layout =  'about'
 +++

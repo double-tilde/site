@@ -1,9 +1,11 @@
 {{ define "main" }}
   {{ partial "title-section.html" . }}
-  <section class="py-8">
-    {{ partial "terms.html" (dict "taxonomy" "tags" "page" .) }}
-  </section>
-  <section class="py-8">
-    {{ partial "all-tags.html" . }}
+  <section class="container mx-auto px-4 py-8 mob-px-0 mob-pt-0">
+    <div class="py-8">
+      {{ .Content }}
+    </div>
+    <div class="py-8">
+      {{ partial "all-tags.html" . }}
+    </div>
   </section>
 {{ end }}

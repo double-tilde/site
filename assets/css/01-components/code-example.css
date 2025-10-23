@@ -1,0 +1,37 @@
+figure.code-example-figure {
+	position: relative;
+	padding: var(--root-8) var(--root-4) var(--root-4);
+	border-radius: var(--root-1);
+	background-color: #0d1117;
+	overflow: hidden;
+
+	figcaption {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		padding: var(--root-2) var(--root-4);
+		background: linear-gradient(to right, var(--silver-clr), transparent);
+		border-radius: var(--root-1) var(--root-1) 0 0;
+		color: var(--white-clr);
+		font-size: 0.8rem;
+		text-transform: uppercase;
+		letter-spacing: 1px;
+		font-weight: 600;
+
+		a {
+			text-decoration: none;
+			color: var(--secondary-clr);
+		}
+
+		a:hover,
+		:focus {
+			border: none;
+			min-width: unset;
+			opacity: 0.7;
+		}
+	}
+}

@@ -1,4 +1,5 @@
 main button,
+main .button,
 main input[type="submit"] {
 	display: block;
 	min-width: var(--root-12);
@@ -16,6 +17,8 @@ main input[type="submit"] {
 
 main button:hover,
 main button:focus,
+main .button:hover,
+main .button:focus,
 main input[type="submit"]:hover,
 main input[type="submit"]:focus {
 	border-color: var(--secondary-clr);
@@ -23,6 +26,7 @@ main input[type="submit"]:focus {
 }
 
 main button.send,
+main .button.send,
 main input[type="submit"].send {
 	border: 1px solid var(--green-clr);
 	color: var(--green-clr);
@@ -30,8 +34,19 @@ main input[type="submit"].send {
 
 main button.send:hover,
 main button.send:focus,
+main .button.send:hover,
+main .button.send:focus,
 main input[type="submit"].send:hover,
 main input[type="submit"].send:focus {
 	background-color: var(--green-clr);
 	color: var(--black-clr);
+}
+
+main button::before,
+main .button::before,
+main input[type="submit"]::before,
+main button::after,
+main .button::after,
+main input[type="submit"]::after {
+	display: none !important;
 }
