@@ -2,8 +2,9 @@
   <section class="container mx-auto px-4 py-8">
     <h1>404 Not Found</h1>
     <p>The page you requested cannot be found :(</p>
-    <p>
+    <p class="flex flex-wrap g-4">
       <a class="styled-link" href="{{ .Site.Home.RelPermalink }}">Return Home</a>
+      <a class="styled-link" href="javascript:history.back()">Go Back</a>
     </p>
   </section>
 {{ end }}

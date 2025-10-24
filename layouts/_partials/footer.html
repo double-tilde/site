@@ -8,7 +8,7 @@
       {{ range .Site.Menus.footer }}
         <li>
           <a
-            class="little-link {{ if or ($currentPage.IsMenuCurrent "footer" .) ($currentPage.HasMenuCurrent "footer" .) }}
+            class="little-text {{ if or ($currentPage.IsMenuCurrent "footer" .) ($currentPage.HasMenuCurrent "footer" .) }}
               active
             {{ end }}
         "
@@ -18,7 +18,7 @@
         </li>
       {{ end }}
       <li>
-        <button class="little-link" type="button" id="dark-mode-toggle">
+        <button class="little-text" type="button" id="dark-mode-toggle">
           Light mode
         </button>
       </li>

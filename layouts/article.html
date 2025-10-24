@@ -22,7 +22,7 @@
     {{ $related := .Site.RegularPages.Related . | first 2 }}
     {{ if $related }}
       <div class="pt-8 mob-px-4">
-        <p class="primary-clr little-link">Related Articles</p>
+        <p class="primary-clr little-text">Related Articles</p>
         <ul class="cards grid grid-col-2 g-6 mob-grid-col-1">
           {{ with $related }}
             {{ range . }}
@@ -36,7 +36,7 @@
   {{ if .Params.comments }}
     <section class="container mx-auto px-4 py-8">
       <hr />
-      <p class="flex justify-end little-link">Let me know what you think :)</p>
+      <p class="flex justify-end little-text">Let me know what you think :)</p>
       {{ partial "utterances.html" . }}
     </section>
   {{ end }}

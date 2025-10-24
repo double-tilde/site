@@ -11,13 +11,13 @@
       {{ $dateMachine := .Date | time.Format "2006-01-02T15:04:05-07:00" }}
       {{ $dateHuman   := .Date | time.Format "2 Jan 2006" }}
       <time
-        class="secondary-accent-clr little-link"
+        class="secondary-accent-clr little-text"
         datetime="{{ $dateMachine }}"
         >{{ $dateHuman }}</time
       >
       <div class="flex items-center justify-end g-4">
         {{ range .Params.tags }}
-          <span class="little-link">{{ . }}</span>
+          <span class="little-text">{{ . }}</span>
         {{ end }}
       </div>
     </div>

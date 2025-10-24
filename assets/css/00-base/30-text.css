@@ -26,7 +26,7 @@ a {
   color: var(--primary-clr);
 }
 
-.little-link {
+.little-text {
   text-transform: uppercase;
   letter-spacing: 1px;
   font-size: 0.8rem;
