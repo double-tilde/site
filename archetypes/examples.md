@@ -1,9 +1,11 @@
 +++
 url = '/:section/code-example-:contentbasename/'
+date = '{{ time.Now.Format "2006-01-02" }}'
+updated = '{{ time.Now.Format "2006-01-02" }}'
 title = '{{ replace .File.ContentBaseName "-" " " | title }}'
+prefix = "CSS"
+layout =  "example"
 +++
-
-<article class="article">
 
 ## Example
 
@@ -40,13 +42,13 @@ title = '{{ replace .File.ContentBaseName "-" " " | title }}'
   <style>
     .code-example {
       display: block;
-        margin-bottom: var(--root-8);
+      margin-bottom: var(--root-8);
     }
     .code-example .container {
-        display: block;
-        height: 100px;
-        width: 100px;
-        background-color: var(--primary-clr);
+      display: block;
+      height: 100px;
+      width: 100px;
+      background-color: var(--primary-clr);
     }
   </style>
 
@@ -56,9 +58,9 @@ title = '{{ replace .File.ContentBaseName "-" " " | title }}'
   </div>
 
   <script type="text/javascript">
-    container = document.querySelector(".code-example .container");
-    container.addEventListener("click", function (event) {
-      window.alert("hello");
+    container = document.querySelector('.code-example .container');
+    container.addEventListener('click', function (event) {
+      window.alert('hello');
     });
   </script>
 </section>
@@ -70,7 +72,3 @@ title = '{{ replace .File.ContentBaseName "-" " " | title }}'
 - another note
 - one final note
 
-<br />
-<a class="button send" href="javascript:history.back()">Go Back</a>
-
-</article>

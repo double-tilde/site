@@ -1,4 +1,7 @@
 +++
 title = 'Examples'
-layout =  'examples'
 +++
+
+# Examples page
+
+examples page content

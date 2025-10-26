@@ -1,0 +1,16 @@
+{{ define "main" }}
+  {{ .Scratch.Set "prefix" (printf "%s: " .Params.prefix) }}
+  {{ partial "title-section.html" . }}
+  <section class="container mx-auto px-4 py-8 mob-px-0 mob-pt-0">
+    <article class="article">
+      {{ .Content }}
+      <br />
+      <div class="flex g-8 items-center justify-between">
+        <a class="button send" href="javascript:history.back()">Go Back</a>
+        <a class="button secondary" href="/{{ .Section }}"
+          >More Examples</a
+        >
+      </div>
+    </article>
+  </section>
+{{ end }}

@@ -1,9 +1,11 @@
 +++
 url = '/:section/code-example-:contentbasename/'
+date = '2025-10-26'
+updated = '2025-10-26'
 title = 'Display Block'
+prefix = "CSS"
+layout =  "example"
 +++
-
-<article class="article">
 
 ## Example
 
@@ -40,13 +42,13 @@ title = 'Display Block'
   <style>
     .code-example {
       display: block;
-        margin-bottom: var(--root-8);
+      margin-bottom: var(--root-8);
     }
     .code-example .container {
-        display: block;
-        height: 100px;
-        width: 100px;
-        background-color: var(--primary-clr);
+      display: block;
+      height: 100px;
+      width: 100px;
+      background-color: var(--primary-clr);
     }
   </style>
 
@@ -56,9 +58,9 @@ title = 'Display Block'
   </div>
 
   <script type="text/javascript">
-    container = document.querySelector(".code-example .container");
-    container.addEventListener("click", function (event) {
-      window.alert("hello");
+    container = document.querySelector('.code-example .container');
+    container.addEventListener('click', function (event) {
+      window.alert('hello');
     });
   </script>
 </section>
@@ -70,7 +72,3 @@ title = 'Display Block'
 - another note
 - one final note
 
-<br />
-<a class="button send" href="javascript:history.back()">Go Back</a>
-
-</article>

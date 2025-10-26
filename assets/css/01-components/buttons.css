@@ -1,52 +1,77 @@
-main button,
-main .button,
-main input[type="submit"] {
-	display: block;
-	min-width: var(--root-12);
-	padding: var(--root-2) var(--root-4);
-	border: 1px solid var(--primary-clr);
-	border-radius: var(--root-1);
-	text-transform: uppercase;
-	letter-spacing: 1px;
-	font-size: 0.8rem;
-	font-weight: 600;
-	background-color: transparent;
-	color: var(--primary-clr);
-	transition: var(--transition-default);
-}
+main {
 
-main button:hover,
-main button:focus,
-main .button:hover,
-main .button:focus,
-main input[type="submit"]:hover,
-main input[type="submit"]:focus {
-	border-color: var(--secondary-clr);
-	color: var(--secondary-clr);
-}
+	section,
+	div,
+	article {
 
-main button.send,
-main .button.send,
-main input[type="submit"].send {
-	border: 1px solid var(--green-clr);
-	color: var(--green-clr);
-}
+		button,
+		.button,
+		input[type="submit"] {
+			display: block;
+			min-width: var(--root-12);
+			padding: var(--root-2) var(--root-4);
+			border: 1px solid var(--primary-clr);
+			border-radius: var(--root-1);
+			text-transform: uppercase;
+			letter-spacing: 1px;
+			font-size: 0.8rem;
+			font-weight: 600;
+			background-color: transparent;
+			color: var(--primary-clr);
+			transition: var(--transition-default);
+		}
 
-main button.send:hover,
-main button.send:focus,
-main .button.send:hover,
-main .button.send:focus,
-main input[type="submit"].send:hover,
-main input[type="submit"].send:focus {
-	background-color: var(--green-clr);
-	color: var(--black-clr);
-}
+		button:hover,
+		button:focus,
+		.button:hover,
+		.button:focus,
+		input[type="submit"]:hover,
+		input[type="submit"]:focus {
+			border-color: var(--secondary-clr);
+			color: var(--secondary-clr);
+		}
 
-main button::before,
-main .button::before,
-main input[type="submit"]::before,
-main button::after,
-main .button::after,
-main input[type="submit"]::after {
-	display: none !important;
+		button.send,
+		.button.send,
+		input[type="submit"].send {
+			border: 1px solid var(--green-clr);
+			color: var(--green-clr);
+		}
+
+		button.send:hover,
+		button.send:focus,
+		.button.send:hover,
+		.button.send:focus,
+		input[type="submit"].send:hover,
+		input[type="submit"].send:focus {
+			background-color: var(--green-clr);
+			color: var(--black-clr);
+		}
+
+		button.secondary,
+		.button.secondary,
+		input[type="submit"].secondary {
+			border: 1px solid var(--secondary-clr);
+			color: var(--secondary-clr);
+		}
+
+		button.secondary:hover,
+		button.secondary:focus,
+		.button.secondary:hover,
+		.button.secondary:focus,
+		input[type="submit"].secondary:hover,
+		input[type="submit"].secondary:focus {
+			background-color: var(--secondary-clr);
+			color: var(--black-clr);
+		}
+
+		button::before,
+		.button::before,
+		input[type="submit"]::before,
+		button::after,
+		.button::after,
+		input[type="submit"]::after {
+			display: none !important;
+		}
+	}
 }
