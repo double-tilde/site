@@ -14,23 +14,36 @@ layout =  "example"
     .code-example {
       display: block;
     }
-    .code-example .container {
-        display: block;
-        height: 100px;
-        width: 100px;
-        background-color: var(--primary-clr);
+    .code-example .square {
+      height: 100px;
+      width: 100px;
+      text-align: center;
+      background-color: var(--primary-clr);
+      transition: 200ms all ease;
+    }
+    .code-example .square span {
+      display: block;
+      text-align: center;
+      vertical-align: middle;
+      line-height: 100px;
+      color: var(--black-clr);
+    }
+    .code-example .square:hover {
+      background-color: var(--secondary-clr);
+      cursor: pointer;
     }
   </style>
 
-  <div class="flex flex-wrap g-4">
-    <div class="container"></div>
-    <div class="container"></div>
-  </div>
+  <div class="square inline-block mr-4 mb-4"><span>Click me!</span></div>
+  <div class="square inline-block"><span>Click me!</span></div>
+  <p class="mb-0">An example of a p tag taking up full width</p>
 
   <script type="text/javascript">
-    container = document.querySelector(".code-example .container");
-    container.addEventListener("click", function (event) {
-      window.alert("hello");
+    squares = document.querySelectorAll(".code-example .square");
+    squares.forEach((square) => {
+      square.addEventListener("click", function() {
+        square.style.display = "none";
+      });
     });
   </script>
 </section>
@@ -42,25 +55,37 @@ layout =  "example"
   <style>
     .code-example {
       display: block;
-      margin-bottom: var(--root-8);
     }
-    .code-example .container {
-      display: block;
+    .code-example .square {
       height: 100px;
       width: 100px;
+      text-align: center;
       background-color: var(--primary-clr);
+      transition: 200ms all ease;
+    }
+    .code-example .square span {
+      display: block;
+      text-align: center;
+      vertical-align: middle;
+      line-height: 100px;
+      color: var(--black-clr);
+    }
+    .code-example .square:hover {
+      background-color: var(--secondary-clr);
+      cursor: pointer;
     }
   </style>
 
-  <div class="flex flex-wrap g-4">
-    <div class="container"></div>
-    <div class="container"></div>
-  </div>
+  <div class="square inline-block mr-4 mb-4"><span>Click me!</span></div>
+  <div class="square inline-block"><span>Click me!</span></div>
+  <p class="mb-0">An example of a p tag taking up full width</p>
 
   <script type="text/javascript">
-    container = document.querySelector('.code-example .container');
-    container.addEventListener('click', function (event) {
-      window.alert('hello');
+    squares = document.querySelectorAll(".code-example .square");
+    squares.forEach((square) => {
+      square.addEventListener("click", function() {
+        square.style.display = "none";
+      });
     });
   </script>
 </section>
@@ -68,7 +93,6 @@ layout =  "example"
 
 ### Notes
 
-- notes go here
-- another note
-- one final note
-
+- Display block to display none affects the other elemenets on the page (unless it has been positioned outside of the document flow with absolute positioning or similar). You can see this with how the other block moves when the first block is clicked. The same applies to inline-block.
+- The transition property has no effect on the display property. Even though the transition is set to apply to "all", it does not apply to display.
+- By default, display block always takes up the full width of the available space (the width of the contianer that is setting the width), you can see this by inspecting the paragraph element. This would only change when an element is a child of a flex or grid parent, where some of its display properties are controlled by the parent element.

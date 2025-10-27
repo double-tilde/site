@@ -14,23 +14,32 @@ layout =  "example"
     .code-example {
       display: block;
     }
-    .code-example .container {
-        display: block;
-        height: 100px;
-        width: 100px;
-        background-color: var(--primary-clr);
+    .code-example .square {
+      height: 100px;
+      width: 100px;
+      text-align: center;
+      background-color: var(--primary-clr);
+      transition: 200ms all ease;
+    }
+    .code-example .square span {
+      display: block;
+      text-align: center;
+      vertical-align: middle;
+      line-height: 100px;
+      color: var(--black-clr);
+    }
+    .code-example .square:hover {
+      background-color: var(--secondary-clr);
+      cursor: pointer;
     }
   </style>
 
-  <div class="flex flex-wrap g-4">
-    <div class="container"></div>
-    <div class="container"></div>
-  </div>
+  <div class="square inline-block"><span>Click me!</span></div>
 
   <script type="text/javascript">
-    container = document.querySelector(".code-example .container");
-    container.addEventListener("click", function (event) {
-      window.alert("hello");
+    square = document.querySelector(".code-example .square");
+    square.addEventListener("click", function() {
+      square.style.display = "none";
     });
   </script>
 </section>
@@ -42,25 +51,33 @@ layout =  "example"
   <style>
     .code-example {
       display: block;
-      margin-bottom: var(--root-8);
     }
-    .code-example .container {
-      display: block;
+    .code-example .square {
       height: 100px;
       width: 100px;
+      text-align: center;
       background-color: var(--primary-clr);
+      transition: 200ms all ease;
+    }
+    .code-example .square span {
+      display: block;
+      text-align: center;
+      vertical-align: middle;
+      line-height: 100px;
+      color: var(--black-clr);
+    }
+    .code-example .square:hover {
+      background-color: var(--secondary-clr);
+      cursor: pointer;
     }
   </style>
 
-  <div class="flex flex-wrap g-4">
-    <div class="container"></div>
-    <div class="container"></div>
-  </div>
+  <div class="square inline-block"><span>Click me!</span></div>
 
   <script type="text/javascript">
-    container = document.querySelector('.code-example .container');
-    container.addEventListener('click', function (event) {
-      window.alert('hello');
+    square = document.querySelector(".code-example .square");
+    square.addEventListener("click", function() {
+      square.style.display = "none";
     });
   </script>
 </section>
