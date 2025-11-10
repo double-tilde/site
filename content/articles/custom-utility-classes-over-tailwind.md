@@ -1,8 +1,8 @@
 +++
-date = '2025-11-09'
-updated = '2025-11-09'
+date = '2025-11-10'
+updated = '2025-11-10'
 url = '/:section/:year-:month-:day-:contentbasename/'
-draft = true
+draft = false
 title = 'Custom Utility Classes Over Tailwind'
 summary = 'Why did I choose to make my own utility classes for this site, rather than using Tailwind?'
 layout =  "article"
