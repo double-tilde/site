@@ -13,11 +13,11 @@
 **/*.db
 
 # Log and History files
-**/log/
+# **/log/
 **/*.log/
 **/*.log*
 **/*_log*
-**/*-log*
+# **/*-log*
 **/history/
 **/*.history/
 **/*.history*
