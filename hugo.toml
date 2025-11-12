@@ -53,6 +53,12 @@ title = 'Double Tilde'
     url = '/articles/index.xml'
     weight = 40
 
+  [[menus.footer]]
+    name = 'Reading Log'
+    pageRef = 'reading log'
+    url = '/reading-log'
+    weight = 50
+
 [params]
   [params.socials]
     [[params.socials.entry]]

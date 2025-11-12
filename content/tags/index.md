@@ -2,6 +2,4 @@
 title = 'Tags'
 +++
 
-# Tags page
-
-Tags page content
+Choose a tag below to find more articles.

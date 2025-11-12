@@ -20,8 +20,9 @@
 <section class="title-section" style="--background-image: url('{{ $bgURL }}');">
   <div class="container mx-auto px-4 py-8">
     <div class="py-8 mob-py-0">
+      {{ $prefix := .Scratch.Get "prefix" }}
       <h1 class="white-clr {{ if (not .Params.date) }}mb-0{{ end }}">
-        {{ .Scratch.Get "prefix" }}{{ .Title }}
+        {{ if not (eq $prefix "%!s(<nil>): ") }}{{ $prefix }}{{ end }}{{ .Title }}
       </h1>
 
       {{ $dateMachine := .Date | time.Format "2006-01-02T15:04:05-07:00" }}

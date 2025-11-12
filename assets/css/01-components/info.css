@@ -1,0 +1,9 @@
+.info {
+	display: inline-block;
+	color: #FFFFFF88;
+	font-size: var(--root-4);
+}
+
+li > .info:first-of-type {
+	margin-left: var(--root-2);
+}
