@@ -34,35 +34,19 @@ a {
 
 .styled-link,
 article a[class] {
-  display: inline-flex;
-  position: relative;
-  text-decoration: none;
+  display: inline;
   color: var(--text-clr);
   min-height: 32px;
+  text-decoration: underline 2px var(--secondary-accent-clr);
+  text-underline-offset: 4px;
 }
 
-.styled-link::before,
-article a[class]::before {
-  position: absolute;
-  content: '';
-  display: block;
-  width: 100%;
-  height: 2px;
-  bottom: 3px;
-  left: 0;
-  background-color: var(--secondary-accent-clr);
-  transition: var(--transition-default);
-}
-
-.styled-link:hover::before,
-.styled-link:focus::before,
-article a[class]:hover::before,
-article a[class]:focus::before {
-  height: 10px;
-  transform-origin: bottom;
+.styled-link:hover,
+.styled-link:focus,
+article a[class]:hover,
+article a[class]:focus {
   opacity: 0.5;
 }
-
 
 main {
 

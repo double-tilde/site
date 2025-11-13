@@ -3,9 +3,9 @@
   href="{{ .Destination | safeURL }}"
   {{- with .Title }}title="{{ . }}"{{ end -}}
   {{- if $u.IsAbs }}rel="external nofollow noopener noreferrer" target="_blank"{{ end -}}
-  class="flex-inline items-center">
+  class="link">
   {{- with .Text }}
-    {{ . }}<i class="mb-1" data-feather="arrow-up-right"></i>
+    {{ . }}
   {{ end -}}
-</a>&nbsp;
+</a><i class="mb-1" data-feather="arrow-up-right"></i>
 {{- /* chomp trailing newline */ -}}
