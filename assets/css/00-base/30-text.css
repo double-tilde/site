@@ -33,6 +33,15 @@ a {
   font-size: 0.8rem;
 }
 
+.link {
+  text-decoration: none;
+}
+
+.link:hover,
+.link:focus {
+  text-decoration: underline;
+}
+
 .styled-link,
 article a[class] {
   display: inline;
