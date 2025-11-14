@@ -33,11 +33,11 @@
       </div>
     {{ end }}
   </section>
-  {{ if .Params.comments }}
-    <section class="container mx-auto px-4 py-8">
-      <hr />
-      <p class="flex justify-end little-text">Let me know what you think :)</p>
+  <section class="container mx-auto px-4 py-8">
+    <hr />
+    {{ partial "article-footer.html" . }}
+    {{ if .Params.comments }}
       {{ partial "utterances.html" . }}
-    </section>
-  {{ end }}
+    {{ end }}
+  </section>
 {{ end }}

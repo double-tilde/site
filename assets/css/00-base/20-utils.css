@@ -1995,6 +1995,10 @@ article {
 
 /* Colors */
 
+.text-clr {
+  color: var(--text-clr);
+}
+
 .white-clr {
   color: var(--white-clr);
 }
