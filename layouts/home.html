@@ -10,7 +10,6 @@
       </p>
     </div>
   </section>
-
   <section class="container mx-auto px-4 py-8">
     <h2>Recent Articles</h2>
     {{ $featuredPages := where .Site.RegularPages "Type" "articles" }}
@@ -21,7 +20,6 @@
       {{ end }}
     </ul>
   </section>
-
   <section class="container mx-auto px-4 py-8" aria-label="All tags">
     {{ partial "all-tags.html" . }}
   </section>

@@ -4,8 +4,8 @@
     <article class="article">
       {{ .Content }}
     </article>
-    <div class="py-8">
-      {{ partial "all-tags.html" . }}
-    </div>
+  </section>
+  <section class="container mx-auto px-4 py-8" aria-label="All tags">
+    {{ partial "all-tags.html" . }}
   </section>
 {{ end }}
