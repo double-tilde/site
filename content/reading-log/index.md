@@ -10,6 +10,7 @@ I usually add longer articles here or articles that really intrigued me, rather 
 
 ### 2025
 
+- [Cloudflare outage on November 18, 2025 - Matthew Prince](https://blog.cloudflare.com/18-november-2025-outage/) {{< info "article" >}} {{< info "cloudflare" >}} {{< info "security" >}} {{< info "ai-ml" >}}
 - [Alchemy - Josh Collinsworth](https://joshcollinsworth.com/blog/alchemy) {{< info "article" >}} {{< info "blog" >}} {{< info "ai" >}} {{< info "art" >}}
 - [Why You Should Memorise More - Joseph Folley](https://josephfolley.substack.com/p/why-you-should-memorise-more) {{< info "article" >}} {{< info "substack" >}} {{< info "philosophy" >}} {{< info "psychology" >}}
 - [The explosion of choice - Sophia Rosenfeld](https://aeon.co/essays/why-an-abundance-of-choice-is-not-the-same-as-freedom) {{< info "essay" >}} {{< info "aeon" >}} {{< info "philosophy" >}} {{< info "politics" >}}
