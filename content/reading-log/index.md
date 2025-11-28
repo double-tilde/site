@@ -10,6 +10,7 @@ I usually add longer articles here or articles that really intrigued me, rather 
 
 ### 2025
 
+- [Practically-A-Book Review: Rootclaim $100,000 Lab Leak Debate - Astral Codex Ten](https://www.astralcodexten.com/p/practically-a-book-review-rootclaim) {{< info "review" >}} {{< info "substack" >}} {{< info "covid" >}} {{< info "debate" >}}
 - [Cloudflare outage on November 18, 2025 - Matthew Prince](https://blog.cloudflare.com/18-november-2025-outage/) {{< info "article" >}} {{< info "cloudflare" >}} {{< info "security" >}} {{< info "ai-ml" >}}
 - [Alchemy - Josh Collinsworth](https://joshcollinsworth.com/blog/alchemy) {{< info "article" >}} {{< info "blog" >}} {{< info "ai" >}} {{< info "art" >}}
 - [Why You Should Memorise More - Joseph Folley](https://josephfolley.substack.com/p/why-you-should-memorise-more) {{< info "article" >}} {{< info "substack" >}} {{< info "philosophy" >}} {{< info "psychology" >}}
