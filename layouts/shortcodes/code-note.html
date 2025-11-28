@@ -1,0 +1,15 @@
+{{ $noteName := .Get 0 }}
+{{ $page := .Site.GetPage (printf "notes/%s" $noteName) }}
+{{ if $page }}
+  {{ with $page.Content | findRE "(?s)<section class=\"code-example\">.*?</section>" }}
+    <figure class="note-figure-example">
+      {{ index . 0 | safeHTML }}
+      <figcaption>
+        Example
+        <a href="/notes/note-{{ $noteName }}">Learn more</a>
+      </figcaption>
+    </figure>
+  {{ end }}
+{{ else }}
+  <p>Code note "{{ $noteName }}" not found.</p>
+{{ end }}

@@ -9,11 +9,11 @@
           {{ partial "card.html" . }}
         {{ end }}
       </ul>
-    {{ else if eq .Section "examples" }}
-      {{ $examples := where .Site.RegularPages "Type" "examples" }}
+    {{ else if eq .Section "notes" }}
+      {{ $notes := where .Site.RegularPages "Type" "notes" }}
       <article class="article">
         <ul>
-          {{ range sort $examples ".Params.prefix" "asc" }}
+          {{ range sort $notes ".Params.prefix" "asc" }}
             <li>
               <a class="h-100 flex flex-col" href="{{ .RelPermalink }}">
                 {{ .Params.prefix }}:

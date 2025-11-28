@@ -1,10 +1,10 @@
 +++
-url = '/:section/code-example-:contentbasename/'
+url = '/:section/note-:contentbasename/'
 date = '2025-10-26'
 updated = '2025-10-26'
 title = 'Display Block'
 prefix = "CSS"
-layout =  "example"
+layout =  "note"
 +++
 
 ## Example
