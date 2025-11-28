@@ -18,6 +18,8 @@ main {
 			font-weight: 600;
 			background-color: transparent;
 			color: var(--primary-clr);
+			text-decoration: none;
+			opacity: 1;
 			transition: var(--transition-default);
 		}
 
@@ -29,6 +31,8 @@ main {
 		input[type="submit"]:focus {
 			border-color: var(--secondary-clr);
 			color: var(--secondary-clr);
+			text-decoration: none;
+			opacity: 1;
 		}
 
 		button.send,
