@@ -10,7 +10,7 @@ I usually add longer articles here or articles that really intrigued me, rather 
 
 ### 2025
 
-### November
+#### November
 
 - [Practically-A-Book Review: Rootclaim $100,000 Lab Leak Debate - Astral Codex Ten](https://www.astralcodexten.com/p/practically-a-book-review-rootclaim) {{< info "review" >}} {{< info "substack" >}} {{< info "covid" >}} {{< info "debate" >}}
 - [Cloudflare outage on November 18, 2025 - Matthew Prince](https://blog.cloudflare.com/18-november-2025-outage/) {{< info "article" >}} {{< info "cloudflare" >}} {{< info "security" >}} {{< info "ai-ml" >}}
