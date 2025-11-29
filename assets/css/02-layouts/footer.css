@@ -21,6 +21,7 @@ footer {
       padding: var(--root-2) var(--root-4);
     }
 
+
     a.active,
     a:hover,
     a:focus,
@@ -28,6 +29,24 @@ footer {
     autton:focus {
       color: var(--secondary-clr);
       opacity: 1;
+    }
+  }
+
+  @media screen and (min-width: 993px) {
+    nav ul:first-child {
+
+      li:first-child a,
+      li:first-child button {
+        padding-left: 0;
+      }
+    }
+
+    nav ul:last-child {
+
+      li:last-child a,
+      li:last-child button {
+        padding-right: 0;
+      }
     }
   }
 

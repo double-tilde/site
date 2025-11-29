@@ -59,6 +59,12 @@ title = 'Double Tilde'
     url = '/reading-log'
     weight = 50
 
+  [[menus.footer]]
+    name = 'Notes'
+    pageRef = 'notes'
+    url = '/notes'
+    weight = 60
+
 [params]
   [params.socials]
     [[params.socials.entry]]
