@@ -8,7 +8,17 @@
       {{ end }}
       <article class="article {{ $gridWidth }} mob-gs-1">
         {{ .Content }}
-        {{ partial "thank-you.html" . }}
+        {{ $content := delimit (slice
+          "<p>Thank you for reading!<br />"
+          "If you enjoyed this article, you can get updates from my "
+          "<a class=\"styled-link\" href=\"/articles/index.xml\">RSS Feed</a> "
+          "to make sure you don't miss out any new posts.<br />"
+          "If you have any questions, feel free to "
+          "<a class=\"styled-link\" href=\"/about/#contact\">contact me.</a></p>"
+          ) ""
+        }}
+
+        {{ partial "thank-you.html" (dict "content" $content "context" .) }}
       </article>
       {{ if strings.Contains .TableOfContents "li" }}
         <aside class="article-menu gs-1 mob-gs-1 mob-px-4">

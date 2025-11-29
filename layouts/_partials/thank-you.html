@@ -1,4 +1,8 @@
-<div class="thank-you relative mt-10 mx-auto px-6 py-8 mob-px-4 mob-py-6 solid-border dashed-border">
-  <p>Thank you for reading!<br>If you enjoyed this article, you can get updates from my <a class="styled-link" href="/articles/index.xml">RSS Feed</a> to make sure you don't miss out any new posts.<br>If you have any questions, feel free to <a class="styled-link" href="/about/#contact">contact me.</a></p>
-  <p class="mb-0 flex items-center g-2 secondary-stroke"><a class="styled-link" href="#main">Back to Top</a><i data-feather="arrow-up-circle"></i></p>
+<div
+  class="thank-you relative mt-10 mx-auto px-6 py-8 mob-px-4 mob-py-6 solid-border dashed-border">
+  {{ .content | safeHTML }}
+  <p class="mb-0 flex items-center g-2 secondary-stroke">
+    <a class="styled-link" href="#main">Back to Top</a
+    ><i data-feather="arrow-up-circle"></i>
+  </p>
 </div>
