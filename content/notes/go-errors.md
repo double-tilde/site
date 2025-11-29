@@ -143,13 +143,13 @@ func main() {
 
 ### Notes
 
-1. In Go, you can set errors equal to variables and then check their equality which can inform how you handle them as the caller. Always start error variables with err or Err, this is called a sentinal error.
-2. This is the most basic form of error handling, in Go when you return two variables from a function. You must return the value first and then the error. Use the 0 value of the first variable if you are returning an error. Use nil for the 0 value of the error if no error occurred.
-3. Using the fmt package we can format the error, passing information in like the file name and the function name where the error occurred and then the error itself.
+1. In Go, you can set errors equal to variables and then check their equality which can inform how you handle them as the caller. Always start error variables with err or Err, this is called a sentinel error.
+2. This is the most basic form of error handling in Go. When you return two variables from a function. You must return the value first and then the error. Use the zero value of the first variable if you are returning an error. Use nil for the zero value of the error if no error occurred. This is why in Go you will frequently see `if err != nil`.
+3. Using the `fmt` package we can format the error, passing useful information in like the file name and the function name where the error occurred and then the error itself. The `%w` verb wraps the error, keeping all of the useful information about the error for unwrapping in the future.
 4. Here we use the the error variable and pass more useful information to the returned error if it fails to read, this is the most likely place this function will fail so giving it more attention makes sense.
-5. Here the log file is created, the logger is set to write to that file and the options for the logger are set and the formatting for the attributes can be updated. Then the logger is set as the default logger to be used by slog and log.
-6. Loging is a simple way to handle errors, it can work well for simple errors
-7. slog = structured logging. The newer slog package works well for formatting errors better. The slog package works seemlessly with log files as JSON which is what was set up at the start of the main function.
+5. Here the log file is created, the logger is set to write to a file and the options for the logger are set and the formatting for the attributes can be updated. Then the logger is set as the default logger to be used by slog and log.
+6. Logging is a simple way to handle errors, it can work well for simple errors.
+7. `slog` = structured logging. The newer slog package works well for formatting errors. The slog package works seamlessly with log files as JSON which was previously set up at the start of the main function.
 8. With this function we can check the type of the error with the `errors.Is` method, this lets us do different things for expected errors and errors that absolutely should not happen. For unexpected outcomes, I decided to panic, which can be the only option in states where there is no recovery.
 
 ### Sources
