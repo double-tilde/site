@@ -93,6 +93,6 @@ layout =  'note'
 
 ### Notes
 
-- Display block to display none affects the other elemenets on the page (unless it has been positioned outside of the document flow with absolute positioning or similar). You can see this with how the other block moves when the first block is clicked. The same applies to inline-block.
-- The transition property has no effect on the display property. Even though the transition is set to apply to "all", it does not apply to display.
-- By default, display block always takes up the full width of the available space (the width of the contianer that is setting the width), you can see this by inspecting the paragraph element. This would only change when an element is a child of a flex or grid parent, where some of its display properties are controlled by the parent element.
+- Display block to display none affects the other elements on the page (unless it has been positioned outside of the document flow with absolute positioning or similar). You can see this with how the other block moves when the first block is clicked. The same applies to inline-block positioning.
+- The transition property has no affect on the display property. Even though the transition is set to apply to "all", it does not apply to display properties.
+- By default, display block always takes up the full width of the available space (the width of the parent container that is setting the width or the body element), you can see this by inspecting the paragraph element. This would only change when an element is a child of a flex or grid parent, where some of its display properties are controlled by the parent element instead.
