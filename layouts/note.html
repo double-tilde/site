@@ -9,7 +9,7 @@
         <a class="button send" href="javascript:history.back()">Go Back</a>
         <a class="button secondary" href="/{{ .Section }}">More Notes</a>
       </div>
-      {{ $content := "<p>Entries in my collection of notes are fairly informal, there may be inaccuracies here and they can be updated at any time.</p>" }}
+      {{ $content := "<p>Entries in my collection of notes are fairly informal, there may be inaccuracies here and they may be moved or changed at any time.</p>" }}
       {{ partial "thank-you.html" (dict "content" $content "context" .) }}
     </article>
   </section>
