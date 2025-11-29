@@ -3,8 +3,8 @@ url = '/:section/note-:contentbasename/'
 date = '{{ time.Now.Format "2006-01-02" }}'
 updated = '{{ time.Now.Format "2006-01-02" }}'
 title = '{{ replace .File.ContentBaseName "-" " " | title }}'
-prefix = "CSS"
-layout =  "notes"
+prefix = 'CSS'
+layout =  'note'
 +++
 
 <section class="code-example">
