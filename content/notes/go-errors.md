@@ -154,6 +154,6 @@ func main() {
 
 ### Sources
 
-- [Error handling and Go - Andrew Gerrand](https://go.dev/blog/error-handling-and-go)
+- [Error handling and Go - Go Blog (Andrew Gerrand)](https://go.dev/blog/error-handling-and-go)
 - [Effective Error Handling in Golang - Brandon Shurman](https://earthly.dev/blog/golang-errors/)
 - [When is it OK to panic in Go? - Alex Edwards](https://www.alexedwards.net/blog/when-is-it-ok-to-panic-in-go)
