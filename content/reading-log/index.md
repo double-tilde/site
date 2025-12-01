@@ -10,6 +10,10 @@ I usually add longer articles here or articles that really intrigued me, rather 
 
 ### 2025
 
+#### December
+
+- [OpenAI says dead teen violated TOS when he used ChatGPT to plan suicide - Ashley Belanger](https://arstechnica.com/tech-policy/2025/11/openai-says-dead-teen-violated-tos-when-he-used-chatgpt-to-plan-suicide/) {{< info "article" >}} {{< info "ars-technica" >}} {{< info "ai" >}} {{< info "ethics" >}}
+
 #### November
 
 - [Practically-A-Book Review: Rootclaim $100,000 Lab Leak Debate - Astral Codex Ten](https://www.astralcodexten.com/p/practically-a-book-review-rootclaim) {{< info "review" >}} {{< info "substack" >}} {{< info "covid" >}} {{< info "debate" >}}
