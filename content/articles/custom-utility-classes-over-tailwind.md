@@ -1,6 +1,6 @@
 +++
 date = '2025-11-10'
-updated = '2025-11-10'
+updated = '2025-12-01'
 url = '/:section/:year-:month-:day-:contentbasename/'
 draft = false
 title = 'Custom Utility Classes Over Tailwind'
@@ -42,9 +42,9 @@ When I have used Tailwind in the past, I find I become too reliant on the utilit
 }
 ```
 
-This code block is styled in the [traditional way,](https://github.com/double-tilde/site/blob/main/assets/css/01-components/code-figure.css)while taking advantage of newer CSS features like nesting classes. It feels tidier to use a dedicated CSS file for complex styling that includes pseudo elements, media screen widths, and lots of properties. I could put this CSS in the Hugo component file for my code blocks, which I may end up doing in the future, but for now I have my CSS confined to the `assets/` folder with a minimal directory structure to keep it simple.
+This code block is styled in the [traditional way,](https://github.com/double-tilde/site/blob/main/assets/css/01-components/code-figure.css)while taking advantage of newer CSS features like nesting classes. It feels tidier to use a dedicated CSS file for complex styling that includes pseudo elements, media screen widths, and lots of properties. I could put this CSS in the Hugo component file for the code blocks, which I may end up doing in the future, but for now I have my CSS confined to the `assets/` folder with a minimal directory structure to keep it simple.
 
-Of course, you can [achieve this](https://tailwindcss.com/docs/adding-custom-styles#adding-component-classes) sort of thing with Tailwind, and the docs make suggestions for dealing with [repeated classes](https://tailwindcss.com/docs/styling-with-utility-classes#managing-duplication), either with some of the built in features or by using modern editor techniques. For this site, it is more of a philosophical difference, not a difference in features. Using Tailwind does not mean you have to only use utility classes with no custom CSS, but I find myself thinking that way when I use it nonetheless.
+Of course, you can [achieve this](https://tailwindcss.com/docs/adding-custom-styles#adding-component-classes) sort of thing with Tailwind, and the docs make suggestions for dealing with [repeated classes](https://tailwindcss.com/docs/styling-with-utility-classes#managing-duplication), either with some of the built in features or by using modern editor tools such as multiple cursors. Using Tailwind does not mean you have to only use utility classes with no custom CSS, but I find myself thinking that way when I use it nonetheless. It's not a mindset I necessarily want to change, I think when you decide to use a tool, you should try and use it completely, if you are not prepared to do that, maybe you should rethink the use of that tool in the first place.
 
 ## When Tailwind is the Right Choice
 
