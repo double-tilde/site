@@ -21,6 +21,14 @@ aside.article-menu {
     color: var(--secondary-clr);
     opacity: 1;
   }
+
+  nav>ul>li>ul {
+    padding-left: var(--root-3);
+
+    a {
+      font-size: var(--root-4);
+    }
+  }
 }
 
 @media screen and (max-width: 992px) {
