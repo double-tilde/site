@@ -25,9 +25,9 @@ article {
     gap: var(--root-4);
 
     a {
-      display: none;
       text-decoration: none;
       color: var(--secondary-clr);
+      opacity: 0;
     }
   }
 
@@ -44,7 +44,7 @@ article {
   h6:hover,
   h6:focus {
     a {
-      display: block;
+      opacity: 1;
     }
   }
 
