@@ -39,3 +39,31 @@ figure.hidden-figure:focus {
     opacity: 1;
   }
 }
+
+figure.hidden-figure-header {
+  position: relative;
+
+  figcaption {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: var(--root-8) var(--root-4) var(--root-4);
+    background: var(--linear-gradient-default);
+    transition: var(--transition-default);
+    opacity: 0;
+
+    a {
+      color: var(--secondary-clr);
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+  }
+}
+
+figure.hidden-figure-header:hover,
+figure.hidden-figure-header:focus {
+  figcaption {
+    opacity: 1;
+  }
+}

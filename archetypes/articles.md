@@ -5,7 +5,10 @@ url = '/:section/:year-:month-:day-:contentbasename/'
 draft = true
 title = '{{ replace .File.ContentBaseName "-" " " | title }}'
 summary = ''
-layout =  "article"
+layout =  'article'
 tags = ['tag']
 comments = true
+image_src = '/images/image.jpg'
+image_alt = '[Title], via Wikimedia Commons (Public Domain)'
+image_link = 'https://en.wikipedia.org/wiki/The_School_of_Athens'
 +++
