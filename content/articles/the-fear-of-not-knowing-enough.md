@@ -2,7 +2,7 @@
 date = '2025-12-03'
 updated = '2025-12-03'
 url = '/:section/:year-:month-:day-:contentbasename/'
-draft = true
+draft = false
 title = 'The Fear of Not Knowing Enough'
 summary = 'When do you know enough to create content about your interests? How can you balance confidence and humility when writing or making videos about complex topics?'
 layout =  'article'
