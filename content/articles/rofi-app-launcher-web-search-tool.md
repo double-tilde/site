@@ -49,7 +49,7 @@ This time I am using `Super+space` to run `$menuWebSearch`,  which is a variable
 
 ## Adding a Script to PATH
 
-If you open a terminal and execute `echo $PATH` you will see a list of directories that are in your user's PATH - it will likely include directories like `/usr/local/bin` and other directories that end in `bin` (which is just a shorter name for "binary"). All it shows is places where you can put binaries and scripts that you will be able to run from anywhere on your computer. You could add your script to one of the directories listed here, or you can add your own personal directory to PATH instead. I prefer to add my own directory as it keeps my personal scripts separate from ones created by applications and programs that I have installed. It is also easier to keep track of your own scripts this way, especially if you end up making a lot of them.
+If you open a terminal and execute `echo $PATH` you will see a list of directories that are in your user's PATH - it will likely include directories like `/usr/local/bin` and other directories that end in `bin` (bin is a shorter name for "binary"). All it shows is places where you can put binaries and scripts that you will be able to run from anywhere on your computer. You could add your script to one of the directories listed here, or you can add your own personal directory to PATH instead. I prefer to add my own directory as it keeps my personal scripts separate from ones created by applications and programs that I have installed. It is also easier to keep track of your own scripts this way, especially if you end up making a lot of them.
 
 To copy my set up, you will need to make a `scripts/` directory inside your `.local/` directory and put the script named `rofi-web-search.sh` inside this new directory. To do that, follow these steps:
 
@@ -152,7 +152,7 @@ The script then looks within those files to see what value is listed as the exec
 
 - If the user types in "kitty", this will match the "kitty" application (as long as you have it installed), the user will press enter and this application will launch.
 - If the user types "kitty configuration options", this will not match an application, so a browser will be launched and Brave (the search engine used in this script) will be filled with the search query.
-- Finally, if the search starts with http(s)" or "www", then the script opens the browser and follows the URL rather than using the search engine.
+- Finally, if the search starts with "http(s)" or "www", then the script opens the browser and follows the URL rather than using the search engine.
 - If the user ends the script with the escape key, the operations are all cancelled.
 
 ![Searching for kitty with rofi](/images/2025-10-17-rofi-kitty.png "Searching for kitty with rofi")

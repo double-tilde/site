@@ -14,7 +14,7 @@ For over a year, I have used the markdown text editor [Obsidian](https://obsidia
 
 ## The Problem
 
-Obsidian has a "vault" which is just the directory Obsidian looks at to find the markdown files that make up your notes. My vault lives in `~/docs/braintwo/` - "braintwo" is the name of my vault. My website lives in my projects directory at `~/projects/double-tilde-site`. As you can see, this directory is completely unrelated to my vault directory. Obsidian lets you have multiple vaults, which can be useful if you have one for work or one for university for keeping these things separate. However, I don't want to use multiple vaults in this case, I want as little friction as possible between having an idea for an article and writing that article.
+Obsidian has a "vault" which is just the directory Obsidian looks at to find the markdown files that make up your notes. My vault lives in `~/docs/braintwo/` - "braintwo" is the name of my vault. My website lives in my projects directory at `~/projects/double-tilde-site`. As you can see, this directory is completely unrelated to my vault directory. Obsidian lets you have multiple vaults, which can be useful if you have one for work and one for university, it lets you keep these things separate. However, I don't want to use multiple vaults in this case, I want as little friction as possible between having an idea for an article and writing that article.
 
 ## The Solution: Symlinks
 
@@ -51,9 +51,9 @@ This will create a folder inside Obsidian called "content".
 
 ![My hugo content folder in my obsdian vault](/images/2025-10-01-obsidian-symlink.png "My hugo content folder in my obsdian vault")
 
-Feel free to rename this folder, I renamed mine to "Website". If you look inside that folder, you should see the structure of your markdown files from your static site. Now you have the comfort of all of your Obsidian plugins and familiar interface for writing your articles. Any changes you make to the files through Obsidian you will see reflected in your code editor with the static site open or in the browser whilst serving the site locally.
+Feel free to rename this folder, I renamed mine to "Website". If you look inside that folder, you should see the structure of your markdown files from your static site. Now you have the comfort of all of your Obsidian plugins and familiar interface for writing your articles. Any changes you make to the files through Obsidian you will see reflected in your code editor or in the browser whilst serving the site locally.
 
-Obviously this set up works best for personal blogs and websites. You would probably want to look into setting up a [headless CMS](https://jamstack.org/headless-cms/) if you were making a static site for a client and need a more cohesive set up. But using a symlink here is quick and simple and doesn't over-engineer the solution, instead we are relying on tools all computers have. [Windows has symbolic links](https://learn.microsoft.com/en-us/windows-server/administration/windows-commands/mklink) too, however the syntax is different to Linux and MacOS.
+Obviously this set up works best for personal blogs and websites. You would probably want to look into setting up a [headless CMS](https://jamstack.org/headless-cms/) if you were making a static site for a client and need a more cohesive set up. But using a symlink here is quick and simple and doesn't over-engineer the solution, instead we are relying on tools all computers have. [Windows has symbolic links](https://learn.microsoft.com/en-us/windows-server/administration/windows-commands/mklink) too, however the syntax is different to the syntax used on Linux and MacOS.
 
 ### Obsidian Sync
 
