@@ -66,6 +66,7 @@ title = 'Double Tilde'
     weight = 60
 
 [params]
+  math = true
   [params.socials]
     [[params.socials.entry]]
       logo = "github"
@@ -99,6 +100,12 @@ title = 'Double Tilde'
     [markup.goldmark.parser]
       [markup.goldmark.parser.attribute]
         title = true
+    [markup.goldmark.extensions]
+      [markup.goldmark.extensions.passthrough]
+        enable = true
+        [markup.goldmark.extensions.passthrough.delimiters]
+          block = [['\[', '\]'], ['$$', '$$']]
+          inline = [['\(', '\)'], ['$', '$']]
   [markup.highlight]
     style = 'github-dark'
 
