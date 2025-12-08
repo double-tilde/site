@@ -56,6 +56,7 @@ article a[class] {
 article a[class]:hover,
 article a[class]:focus {
   opacity: 0.5;
+  text-decoration: underline 2px var(--white-clr);
 }
 
 main {
