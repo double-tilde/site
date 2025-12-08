@@ -12,6 +12,7 @@ I usually add longer articles here or articles that really intrigued me, rather 
 
 #### December
 
+- [What Is It Like to Be a Bat? - Thomas Nagel](https://ia800100.us.archive.org/5/items/thomas-nagel-what-is-it-like-to-be-a-bat/Thomas%20Nagel%2C%20What%20Is%20It%20Like%20to%20Be%20a%20Bat.pdf) {{< info "essay" >}} {{< info "philosophy" >}} {{< info "psychology" >}} {{< info "consciousness" >}}
 - [OpenAI says dead teen violated TOS when he used ChatGPT to plan suicide - Ashley Belanger](https://arstechnica.com/tech-policy/2025/11/openai-says-dead-teen-violated-tos-when-he-used-chatgpt-to-plan-suicide/) {{< info "article" >}} {{< info "ars-technica" >}} {{< info "ai" >}} {{< info "ethics" >}}
 
 #### November
