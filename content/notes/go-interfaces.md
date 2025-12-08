@@ -2,8 +2,7 @@
 url = '/:section/note-:contentbasename/'
 date = '2025-12-04'
 updated = '2025-12-04'
-title = 'Interfaces'
-prefix = 'Go'
+title = 'Go: Interfaces'
 layout =  'note'
 +++
 

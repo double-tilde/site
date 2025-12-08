@@ -2,8 +2,7 @@
 url = '/:section/note-:contentbasename/'
 date = '2025-10-26'
 updated = '2025-10-26'
-title = 'Display Block'
-prefix = 'CSS'
+title = 'CSS: Display Block'
 layout =  'note'
 +++
 

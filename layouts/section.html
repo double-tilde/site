@@ -13,11 +13,10 @@
       {{ $notes := where .Site.RegularPages "Type" "notes" }}
       <article class="article">
         <ul>
-          {{ range sort $notes ".Params.prefix" "asc" }}
+          {{ range sort $notes ".Title" "asc" }}
             <li>
               <a class="h-100 flex flex-col" href="{{ .RelPermalink }}">
-                {{ .Params.prefix }}:
-                {{ .LinkTitle }}
+                {{ .Title }}
               </a>
             </li>
           {{ end }}
