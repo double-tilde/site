@@ -3,3 +3,10 @@
     color: var(--secondary-clr);
   }
 }
+
+.MathJax[display="true"] {
+  background-color: var(--bg-clr);
+  padding: var(--root-4);
+  border-radius: var(--root-1);
+  overflow-x: auto;
+}

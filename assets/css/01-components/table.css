@@ -1,3 +1,9 @@
+.table:has(table) {
+	overflow-x: auto;
+	overflow-y: hidden;
+	margin: var(--root-6) 0;
+}
+
 table {
 	width: 100%;
 

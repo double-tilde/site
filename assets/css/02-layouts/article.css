@@ -100,8 +100,7 @@ article {
   }
 
   pre,
-  blockquote,
-  table {
+  blockquote {
     margin: var(--root-6) 0;
   }
 
