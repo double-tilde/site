@@ -63,7 +63,7 @@
   </div>
   {{ if .Params.image_src }}
     <figure class="hidden-figure-header">
-      <img src="{{ .Params.image_src }}" alt="{{ .Params.image_alt }}" />
+      <img {{ if .Params.image_contain }} style="object-fit: contain;" {{ end }} src="{{ .Params.image_src }}" alt="{{ .Params.image_alt }}" />
       {{ if .Params.image_alt }}
         <figcaption>
           <a href="{{ .Params.image_link }}" target="_blank"

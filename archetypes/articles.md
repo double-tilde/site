@@ -11,4 +11,5 @@ comments = true
 image_src = '/images/image.jpg'
 image_alt = '[Title], via Wikimedia Commons (Public Domain)'
 image_link = 'https://en.wikipedia.org/wiki/The_School_of_Athens'
+image_contain = false
 +++

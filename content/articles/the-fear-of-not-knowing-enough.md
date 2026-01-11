@@ -11,6 +11,7 @@ comments = true
 image_src = '/images/2025-12-03-the-school-of-athens.jpg'
 image_alt = 'The School of Athens, via Wikimedia Commons (Public Domain)'
 image_link = 'https://en.wikipedia.org/wiki/The_School_of_Athens'
+image_contain = false
 +++
 
 One feeling that stopped me from creating this site in the past was the unease that came from knowing I could always know more. I'd worry that I don't have the authority to talk about a subject, so why should I bother contributing to the discourse online when there are smarter people already doing so? I think a lot of people feel this way and hold back on creating a Substack, YouTube channel or website due to this fear. They are envious of those who seem unbound in their ability to create videos talking about whatever they like.
