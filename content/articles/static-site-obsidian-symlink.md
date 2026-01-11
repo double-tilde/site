@@ -49,7 +49,7 @@ ln -s ~/projects/double-tilde-site/content/ ~/docs/braintwo/30\ -\ Notes
 
 This will create a folder inside Obsidian called "content".
 
-![My hugo content folder in my obsdian vault](/images/2025-10-01-obsidian-symlink.png "My hugo content folder in my obsdian vault")
+![My hugo content folder in my obsidian vault](/images/2025-10-01-obsidian-symlink.png "My hugo content folder in my obsdian vault")
 
 Feel free to rename this folder, I renamed mine to "Website". If you look inside that folder, you should see the structure of your markdown files from your static site. Now you have the comfort of all of your Obsidian plugins and familiar interface for writing your articles. Any changes you make to the files through Obsidian you will see reflected in your code editor or in the browser whilst serving the site locally.
 
