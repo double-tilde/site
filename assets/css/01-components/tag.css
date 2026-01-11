@@ -16,7 +16,8 @@
 	}
 }
 
-.tag.tag-light {
+.dark .tag.tag-light,
+section.title-section .tag.tag-light {
 	a {
 		background-color: #FFFFFF33;
 		color: #ffffff;
@@ -25,6 +26,19 @@
 	>a:hover,
 	>a:focus {
 		background-color: #FFFFFF66;
+		color: #ffffff;
+	}
+}
+
+.tag.tag-light {
+	a {
+		background-color: var(--primary-clr);
+		color: #ffffff;
+	}
+
+	>a:hover,
+	>a:focus {
+		background-color: var(--secondary-accent-clr);
 		color: #ffffff;
 	}
 }

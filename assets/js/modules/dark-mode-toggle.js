@@ -4,19 +4,9 @@ export function darkModeToggle() {
   let darkTheme;
   let htmlElement = document.documentElement;
 
-  if (
-    localStorage.theme == 'dark' ||
-    (!('theme' in localStorage) &&
-      window.matchMedia('(prefers-color-scheme: dark)').matches)
-  ) {
-    htmlElement.classList.add('dark');
-    button.textContent = 'Light mode';
-    darkTheme = true;
-  } else {
-    htmlElement.classList.remove('dark');
-    button.textContent = 'Dark mode';
-    darkTheme = false;
-  }
+  htmlElement.classList.add('dark');
+  button.textContent = 'Light mode';
+  darkTheme = true;
 
   button.addEventListener('click', function () {
     darkTheme = !darkTheme;
