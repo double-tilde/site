@@ -12,6 +12,7 @@ I usually add longer articles here or articles that really intrigued me, rather 
 
 #### January
 
+- [Are Atomic Operations Faster and Better Than a Mutex? It Depends - Benjamin Cane](https://madflojo.dev/posts/are-atomic-operations-faster-than-a-mutex/) {{< info "article" >}} {{< info "blog" >}} {{< info "go" >}} {{< info "concurrency" >}}
 - [Command Line Interface Guidelines](https://clig.dev/) {{< info "website" >}} {{< info "style-guide" >}} {{< info "programming" >}} {{< info "philosophy" >}}
 
 ### 2025
