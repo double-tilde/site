@@ -1,0 +1,28 @@
+<div>
+  <div class="education" aria-label="education">
+    <h2>Education</h2>
+    <ul>
+      {{ range .Site.Params.education.entry }}
+        <li class="card mt-4">
+          <div>
+            <h2>{{ .title }}</h2>
+            <p>{{ .description }}</p>
+            <div
+              class="mt-auto flex items-center justify-between g-4 mob-flex-col mob-items-start">
+              {{ $dateMachine := .date | time.Format "2006-01" }}
+              {{ $dateHuman   := .date | time.Format "January 2006" }}
+              <time
+                class="secondary-accent-clr little-text"
+                datetime="{{ $dateMachine }}"
+                >{{ $dateHuman }}</time
+              >
+              <div class="flex items-center justify-end g-4">
+                <span class="little-text">{{ .org }}</span>
+              </div>
+            </div>
+          </div>
+        </li>
+      {{ end }}
+    </ul>
+  </div>
+</div>

@@ -67,6 +67,7 @@ title = 'Double Tilde'
 
 [params]
   math = true
+
   [params.socials]
     [[params.socials.entry]]
       logo = "github"
@@ -87,6 +88,25 @@ title = 'Double Tilde'
       logo = "gitlab"
       label = "Gitlab"
       href = "https://gitlab.com/double-tilde"
+
+  [params.education]
+    [[params.education.entry]]
+      title = "Supervised Machine Learning Certificate"
+      description = "The second course I took via WatSPEED was focused on a specific area of machine learning. The supervised machine learning course was eight weeks and explored various techniques, including algorithms of regression (linear and logical) and classification (Naïve Bayes, k-NN), model performance, feature selection, tree-based methods and support vector machines. We then used these models in Python. Next, we compared the performance of the classification models and implemented various cross-validation techniques. We applied feature selection, shrinkage methods and support vector machines and learnt about the benefits of these different techniques. Finally, we applied tree-based methods to the regression and classification models. Learning about the specific area of supervised machine learning made ML feel more approachable as a whole."
+      date = "2025-12-22"
+      org = "University of Waterloo Watspeed"
+
+    [[params.education.entry]]
+      title = "Python For Machine Learning Certificate"
+      description = "Through my position as a web designer, I was able to take WatSPEED courses, shorter programs available through the University of Waterloo. I decided to look into machine learning. I completed a seven week course that focused on the foundational skills for machine learning such as terminology, methods, and best practices for data preparation. The course covered how to apply data manipulation techniques to prepare data sets, how to handle missing values, duplicates, categorical data, and outliers. We then moved on to splitting a data set into training and test sets and then used feature scaling methods to transform the data. We finally created data visualizations using Seaborn, Matplotlib, and Pandas and explored the challenges of using certain models. Overall, I gained a broader understanding of machine learning and what it can be used for."
+      date = "2025-07-25"
+      org = "University of Waterloo Watspeed"
+
+    [[params.education.entry]]
+      title = "Diploma of Higher Education"
+      description = "I Studied Philosophy for 2 years at UEA. Whilst studying I improved my communication skills, learnt how to understand other points of view and critique them, and how to formulate good questions to solve problems. My favourite subject was Propositional Logic, the study of calculating an argument's validity using equations."
+      date = "2018-05-01"
+      org = "University of East Anglia"
 
 [module]
   [module.hugoVersion]

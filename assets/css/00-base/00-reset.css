@@ -47,6 +47,18 @@ ol {
   list-style: none;
 }
 
+/* Resetting list styles */
+ul.list,
+ol.list {
+  padding: revert;
+  list-style: revert;
+
+  ::marker {
+    color: var(--secondary-clr);
+  }
+}
+
+
 /* Remove default quotes */
 blockquote,
 q {

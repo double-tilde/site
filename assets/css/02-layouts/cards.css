@@ -3,7 +3,7 @@
   background-color: var(--gray-clr);
   border-radius: var(--root-1);
 
-  >a {
+  >* {
     padding: var(--root-6);
     text-decoration: none;
 
@@ -32,8 +32,8 @@
   pointer-events: none;
 }
 
-.card:hover:before,
-.card:focus:before {
+.card:has(a):hover:before,
+.card:has(a):focus:before {
   top: var(--root--1);
   left: var(--root--1);
   opacity: 1;
