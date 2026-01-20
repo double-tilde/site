@@ -42,28 +42,34 @@ title = 'Double Tilde'
     weight = 20
 
   [[menus.footer]]
+    name = 'Projects'
+    pageRef = 'projects'
+    url = '/about/#projects'
+    weight = 30
+
+  [[menus.footer]]
     name = 'Back to Top'
     pageRef = 'back to top'
     url = '#main'
-    weight = 30
+    weight = 40
 
   [[menus.footer]]
     name = 'RSS Feed'
     pageRef = 'rss feed'
     url = '/articles/index.xml'
-    weight = 40
+    weight = 50
 
   [[menus.footer]]
     name = 'Reading Log'
     pageRef = 'reading log'
     url = '/reading-log'
-    weight = 50
+    weight = 60
 
   [[menus.footer]]
     name = 'Notes'
     pageRef = 'notes'
     url = '/notes'
-    weight = 60
+    weight = 70
 
 [params]
   math = true
@@ -88,6 +94,15 @@ title = 'Double Tilde'
       logo = "gitlab"
       label = "Gitlab"
       href = "https://gitlab.com/double-tilde"
+
+  [params.projects]
+    [[params.projects.entry]]
+      title = "Double Tilde Website"
+      source = "https://github.com/double-tilde/site"
+      description = ["I started creating this site in the summer of 2025, I had previously gone back and fourth on creating a website for a few years, since a lot of people use the internet as a way to access social media, so I would find myself discouraged to maintain a personal site.", "However, I think it is important to contribute to the internet you want to have rather than the one that currently exists, your website may never reach as many people as Reddit or TikTok, but those that read your site will often appreciate your articles much more than your comments in a sea of other users and bots.", "I used this project as a way to start writing articles, I aim to write 1-2 per month. I decided to build it with Hugo, which is a static site framework built with Go, the syntax is simple and has a lot of built in features useful for templating like render hooks and shortcodes.", "The name for my website comes from my interest in philosophy, logic, and programming. The double tilde sign is used for approximation and negation in these subjects, it also looks cool as a logo."]
+      image = "/images/project-double-tilde-site.svg"
+      date = "2025-10-01"
+      tech = ["Hugo", "CSS", "JavaScript", "SSG"]
 
   [params.education]
     [[params.education.entry]]

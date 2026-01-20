@@ -42,7 +42,7 @@
 @media screen and (max-width: 992px) {
   .card {
 
-    >a {
+    >* {
       padding: var(--root-4);
     }
   }

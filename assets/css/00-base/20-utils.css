@@ -20,10 +20,6 @@
   margin-top: auto;
 }
 
-.mb-auto {
-  margin-bottom: auto;
-}
-
 .m-0 {
   margin: var(--root-0);
 }
@@ -825,6 +821,14 @@
   flex-direction: column;
 }
 
+.flex-rev {
+  flex-direction: row-reverse;
+}
+
+.flex-col-rev {
+  flex-direction: column-reverse;
+}
+
 .flex-wrap {
   flex-wrap: wrap;
 }
@@ -1264,6 +1268,22 @@ article {
   border-radius: var(--root-1);
 }
 
+.solid-border.solid-primary {
+  border: 2px solid var(--primary-clr);
+}
+
+.solid-border.solid-secondary {
+  border: 2px solid var(--secondary-clr);
+}
+
+.solid-border.solid-primary-accent {
+  border: 2px solid var(--primary-accent-clr);
+}
+
+.solid-border.solid-secondary-accent {
+  border: 2px solid var(--secondary-accent-clr);
+}
+
 .dashed-border:before {
   position: absolute;
   content: "";
@@ -1275,6 +1295,22 @@ article {
   border: 2px dashed var(--secondary-accent-clr);
   border-radius: var(--root-1);
   pointer-events: none;
+}
+
+.dashed-border.dashed-primary:before {
+  border: 2px dashed var(--primary-clr);
+}
+
+.dashed-border.dashed-secondary:before {
+  border: 2px dashed var(--secondary-clr);
+}
+
+.dashed-border.dashed-primary-accent:before {
+  border: 2px dashed var(--primary-accent-clr);
+}
+
+.dashed-border.dashed-secondary-accent:before {
+  border: 2px dashed var(--secondary-accent-clr);
 }
 
 /* Mobile */
@@ -1688,6 +1724,14 @@ article {
 
   .mob-flex-col {
     flex-direction: column;
+  }
+
+  .mob-flex-rev {
+    flex-direction: row-reverse;
+  }
+
+  .mob-flex-col-rev {
+    flex-direction: column-reverse;
   }
 
   .mob-flex-wrap {

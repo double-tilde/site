@@ -1,0 +1,50 @@
+<div class="projects" aria-label="projects" id="projects">
+  <h2>Projects</h2>
+  <ul class="flex flex-col g-6 alternate-borders">
+    {{ $index := 0 }}
+    {{ range .Site.Params.projects.entry }}
+      {{ $index = add $index 1 }}
+      <li
+        class="relative p-6 mob-p-4 solid-border dashed-border {{ if eq (mod $index 2) 0 }}
+          solid-primary dashed-secondary
+        {{ end }}">
+        <div>
+          <div class="flex items-start justify-between g-4 mob-flex-col-rev">
+            <h3>{{ .title }}</h3>
+            <a
+              class="link little-text flex items-center g-2 secondary-stroke"
+              target="_blank"
+              href="{{ .source }}">
+              <i data-feather="code"></i>Source code</a
+            >
+          </div>
+          <div class="mb-6 grid grid-col-2 mob-grid-col-1 g-6">
+            <div class="flex flex-col g-4">
+              {{ range .description }}
+                <p class="mb-0">{{ . }}</p>
+              {{ end }}
+            </div>
+            <div class="flex items-center justify-center">
+              <img src="{{ .image }}" alt="Project image" />
+            </div>
+          </div>
+          <div
+            class="mt-auto flex items-center justify-between g-4 mob-flex-col mob-items-start">
+            {{ $dateMachine := .date | time.Format "2006-01" }}
+            {{ $dateHuman   := .date | time.Format "January 2006" }}
+            <time
+              class="secondary-accent-clr little-text"
+              datetime="{{ $dateMachine }}"
+              >{{ $dateHuman }}</time
+            >
+            <div class="flex items-center justify-end g-4">
+              {{ range .tech }}
+                <span class="secondary-clr little-text">{{ . }}</span>
+              {{ end }}
+            </div>
+          </div>
+        </div>
+      </li>
+    {{ end }}
+  </ul>
+</div>
