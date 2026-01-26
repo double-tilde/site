@@ -25,7 +25,17 @@
               {{ end }}
             </div>
             <div class="flex items-center justify-center">
-              <img src="{{ .image }}" alt="Project image" />
+              {{ $img := resources.Get .image }}
+              {{ if and $img (ne $img.MediaType.SubType "svg") }}
+                {{ $img = $img.Resize (printf "%dx webp q100" $img.Width) }}
+              {{ end }}
+              {{ with $img }}
+                <img
+                  src="{{ .RelPermalink }}"
+                  alt="Project image"
+                  loading="lazy"
+                  decoding="async" />
+              {{ end }}
             </div>
           </div>
           <div

@@ -16,11 +16,17 @@
     {{ end }}
   </div>
   {{ $img := resources.Get "/images/about-rosie.jpg" }}
-  {{ $img = $img.Resize (printf "%dx webp q80" $img.Width) }}
+  {{ if ne .MediaType.SubType "svg" }}
+    {{ $img = $img.Resize (printf "%dx webp q80" $img.Width) }}
+  {{ end }}
   <div class="cat" aria-label="cat">
     {{ with $img }}
       <figure class="hidden-figure" style="max-width: 640px; width: 100%;">
-        <img src="{{ .RelPermalink }}" alt="Rosie as a kitten sleeping on my desk" />
+        <img
+          src="{{ .RelPermalink }}"
+          alt="Rosie as a kitten sleeping on my desk"
+          loading="lazy"
+          decoding="async" />
         <figcaption>Rosie as a kitten sleeping on my desk</figcaption>
       </figure>
     {{ end }}

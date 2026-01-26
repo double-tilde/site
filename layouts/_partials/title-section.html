@@ -63,7 +63,19 @@
   </div>
   {{ if .Params.image_src }}
     <figure class="hidden-figure-header">
-      <img {{ if .Params.image_contain }} style="object-fit: contain;" {{ end }} src="{{ .Params.image_src }}" alt="{{ .Params.image_alt }}" />
+      {{ $img := resources.Get .Params.image_src }}
+      {{ if and $img (ne $img.MediaType.SubType "svg") }}
+        {{ $img = $img.Resize (printf "%dx webp q100" $img.Width) }}
+      {{ end }}
+
+      {{ with $img }}
+        <img
+          {{ if .Params.image_contain }}style="object-fit: contain;"{{ end }}
+          src="{{ .RelPermalink }}"
+          alt="{{ .Params.image_alt }}"
+          loading="lazy"
+          decoding="async" />
+      {{ end }}
       {{ if .Params.image_alt }}
         <figcaption>
           <a href="{{ .Params.image_link }}" target="_blank"

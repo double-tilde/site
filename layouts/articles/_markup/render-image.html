@@ -1,26 +1,17 @@
 {{ $dest := .Destination }}
-
-{{/* match trailing number before extension */}}
 {{ $width := "" }}
+
+{{/* TODO: move size to a property rather than in the file name */}}
 {{ with (findRE `-(\d+)\.[a-zA-Z]+$` $dest) }}
-  {{ $match := index . 0 }}
-  {{ $width = replaceRE `-(\d+)\.[a-zA-Z]+$` `$1` $match }}
+  {{ $width = replaceRE `.*-(\d+)\.[a-zA-Z]+$` `$1` (index . 0) }}
 {{ end }}
 
-{{/* remove width from filename */}}
-{{ $basePath := $dest }}
-{{ if ne $width "" }}
-  {{ $basePath = replaceRE `-(\d+)(\.[a-zA-Z]+)$` `$2` $dest }}
-{{ end }}
+{{ $img := resources.Get $dest }}
 
-{{ $img := resources.Get $basePath }}
-
-{{ if $img }}
-  {{ if ne $width "" }}
-    {{ $img = $img.Resize (printf "%sx webp q80" $width) }}
-  {{ else }}
-    {{ $img = $img.Resize (printf "%dx webp q80" $img.Width) }}
-  {{ end }}
+{{ if and $img (ne $width "") }}
+  {{ $img = $img.Resize (printf "%sx webp q100" $width) }}
+{{ else if $img }}
+  {{ $img = $img.Resize (printf "%dx webp q100" $img.Width) }}
 {{ end }}
 
 
