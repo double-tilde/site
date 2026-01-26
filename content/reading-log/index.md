@@ -12,6 +12,7 @@ I usually add longer articles here or articles that really intrigued me, rather 
 
 #### January
 
+- [Yes, It’s Fascism](https://www.theatlantic.com/ideas/2026/01/america-fascism-trump-maga-ice/685751/) {{< info "article" >}} {{< info "the-atlantic" >}} {{< info "politics" >}} {{< info "usa" >}}
 - [Are Atomic Operations Faster and Better Than a Mutex? It Depends - Benjamin Cane](https://madflojo.dev/posts/are-atomic-operations-faster-than-a-mutex/) {{< info "article" >}} {{< info "blog" >}} {{< info "go" >}} {{< info "concurrency" >}}
 - [Command Line Interface Guidelines](https://clig.dev/) {{< info "website" >}} {{< info "style-guide" >}} {{< info "programming" >}} {{< info "philosophy" >}}
 
