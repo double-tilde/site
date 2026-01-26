@@ -4,7 +4,7 @@
 }
 
 .title-section {
-  --background-image: url(/images/backgrounds/blurred-1.jpg);
+  --background-image: url(/backgrounds/blurred-1.jpg);
   position: relative;
   overflow: hidden;
 

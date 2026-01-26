@@ -15,12 +15,14 @@
       </p>
     {{ end }}
   </div>
+  {{ $img := resources.Get "/images/about-rosie.jpg" }}
+  {{ $img = $img.Resize (printf "%dx webp q80" $img.Width) }}
   <div class="cat" aria-label="cat">
-    <figure class="hidden-figure" style="max-width: 640px; width: 100%;">
-      <img
-        src="/images/about-rosie.jpg"
-        alt="Rosie as a kitten sleeping on my desk" />
-      <figcaption>Rosie as a kitten sleeping on my desk</figcaption>
-    </figure>
+    {{ with $img }}
+      <figure class="hidden-figure" style="max-width: 640px; width: 100%;">
+        <img src="{{ .RelPermalink }}" alt="Rosie as a kitten sleeping on my desk" />
+        <figcaption>Rosie as a kitten sleeping on my desk</figcaption>
+      </figure>
+    {{ end }}
   </div>
 </div>

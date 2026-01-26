@@ -1,32 +1,43 @@
-{{ $filename := .Destination }}
-{{ $parts := split $filename "-" }}
-{{ $lastPart := index $parts (sub (len $parts) 1) }}
-{{ $number := "" }}
+{{ $dest := .Destination }}
 
-{{ if in $lastPart "." }}
-  {{ $lastDashPart := split $lastPart "." }}
-  {{ $number = index $lastDashPart 0 }}
+{{/* match trailing number before extension */}}
+{{ $width := "" }}
+{{ with (findRE `-(\d+)\.[a-zA-Z]+$` $dest) }}
+  {{ $match := index . 0 }}
+  {{ $width = replaceRE `-(\d+)\.[a-zA-Z]+$` `$1` $match }}
 {{ end }}
 
-{{ if .Title }}
-  <figure class="hidden-figure">
-    <img class="background" src="{{ .Destination | safeURL }}" />
-    <img
-      src="{{ .Destination | safeURL }}"
-      alt="{{ .Text }}"
-      {{ if and (ne $number "") (findRE `^\d+$` $number) }}
-        style="max-width: {{ $number }}px"
-      {{ end }} />
+{{/* remove width from filename */}}
+{{ $basePath := $dest }}
+{{ if ne $width "" }}
+  {{ $basePath = replaceRE `-(\d+)(\.[a-zA-Z]+)$` `$2` $dest }}
+{{ end }}
+
+{{ $img := resources.Get $basePath }}
+
+{{ if $img }}
+  {{ if ne $width "" }}
+    {{ $img = $img.Resize (printf "%sx webp q80" $width) }}
+  {{ else }}
+    {{ $img = $img.Resize (printf "%dx webp q80" $img.Width) }}
+  {{ end }}
+{{ end }}
+
+
+<figure class="hidden-figure">
+  <img
+    src="{{ with $img }}
+      {{ .RelPermalink }}
+    {{ else }}
+      {{ .Destination | safeURL }}
+    {{ end }}"
+    alt="{{ .Text }}"
+    loading="lazy"
+    decoding="async"
+    {{ if ne $width "" }}
+      style="max-width: {{ $width }}px"
+    {{ end }} />
+  {{ if .Title }}
     <figcaption>{{ .Title }}</figcaption>
-  </figure>
-{{ else }}
-  <figure class="hidden-figure">
-    <img class="background" src="{{ .Destination | safeURL }}" />
-    <img
-      src="{{ .Destination | safeURL }}"
-      alt="{{ .Text }}"
-      {{ if and (ne $number "") (findRE `^\d+$` $number) }}
-        style="max-width: {{ $number }}px"
-      {{ end }} />
-  </figure>
-{{ end }}
+  {{ end }}
+</figure>
