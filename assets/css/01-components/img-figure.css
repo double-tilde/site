@@ -2,7 +2,7 @@ figure.hidden-figure {
   position: relative;
   overflow: hidden;
   border-radius: var(--root-1);
-  background-color: var(--black-clr);
+  background-color: #0d1117;
   z-index: 0;
 
   figcaption {
