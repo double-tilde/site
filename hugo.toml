@@ -76,9 +76,19 @@ title = 'Double Tilde'
 
   [params.socials]
     [[params.socials.entry]]
+      logo = "at-sign"
+      label = "Bluesky"
+      href = "https://bsky.app/profile/double-tilde.bsky.social"
+
+    [[params.socials.entry]]
       logo = "github"
       label = "Github"
       href = "https://github.com/double-tilde"
+
+    [[params.socials.entry]]
+      logo = "gitlab"
+      label = "Gitlab"
+      href = "https://gitlab.com/double-tilde"
 
     [[params.socials.entry]]
       logo = "linkedin"
@@ -90,10 +100,7 @@ title = 'Double Tilde'
       label = "YouTube (coming soon)"
       href = "https://youtube.com"
 
-    [[params.socials.entry]]
-      logo = "gitlab"
-      label = "Gitlab"
-      href = "https://gitlab.com/double-tilde"
+
 
   [params.projects]
     [[params.projects.entry]]
