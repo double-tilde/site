@@ -29,6 +29,24 @@ title = 'Double Tilde'
     url = '/about/#contact'
     weight = 30
 
+  [[menus.main]]
+    name = 'Projects'
+    pageRef = 'projects'
+    url = '/about/#projects'
+    weight = 40
+
+  [[menus.main]]
+    name = 'Reading Log'
+    pageRef = 'reading log'
+    url = '/reading-log'
+    weight = 50
+
+  [[menus.main]]
+    name = 'Notes'
+    pageRef = 'notes'
+    url = '/notes'
+    weight = 60
+
   [[menus.footer]]
     name = 'Home'
     pageRef = 'home'

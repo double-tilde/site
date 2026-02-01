@@ -1,0 +1,51 @@
+<nav class="nav-mobile" id="nav-mobile">
+  <button type="button" class="mobile-close-btn mb-8 little-text secondary-clr">
+    Close
+  </button>
+  <ul class="flex flex-col items-center justify-center">
+    {{ $currentPage := . }}
+    <li>
+      <a class="little-text p-2" href="/">Home</a>
+    </li>
+    {{ range .Site.Menus.main }}
+      {{ if le .Weight 30 }}
+        <li>
+          <a
+            class="little-text p-3 {{ if or ($currentPage.IsMenuCurrent "main" .) ($currentPage.HasMenuCurrent "main" .) }}
+              active
+            {{ end }}
+        "
+            href="{{ .URL }}">
+            {{ .Name }}
+          </a>
+        </li>
+      {{ end }}
+    {{ end }}
+  </ul>
+  <span class="dt secondary-clr">~~</span>
+  <ul class="flex flex-col items-center justify-center">
+    {{ $currentPage := . }}
+    {{ range .Site.Menus.main }}
+      {{ if ge .Weight 40 }}
+        <li>
+          <a
+            class="little-text p-3 {{ if or ($currentPage.IsMenuCurrent "main" .) ($currentPage.HasMenuCurrent "main" .) }}
+              active
+            {{ end }}
+        "
+            href="{{ .URL }}">
+            {{ .Name }}
+          </a>
+        </li>
+      {{ end }}
+    {{ end }}
+    <li>
+      <button class="dark-mode-toggle little-text text-clr p-3" type="button">
+        Light mode
+      </button>
+    </li>
+  </ul>
+  <button type="button" class="mobile-close-btn mt-8 little-text secondary-clr">
+    Close
+  </button>
+</nav>

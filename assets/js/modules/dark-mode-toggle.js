@@ -1,5 +1,5 @@
 export function darkModeToggle() {
-  const button = document.getElementById('dark-mode-toggle');
+  const button = document.querySelectorAll('.dark-mode-toggle');
 
   let darkTheme;
   let htmlElement = document.documentElement;
@@ -8,17 +8,19 @@ export function darkModeToggle() {
   button.textContent = 'Light mode';
   darkTheme = true;
 
-  button.addEventListener('click', function () {
-    darkTheme = !darkTheme;
+  button.forEach((btn) => {
+    btn.addEventListener('click', function () {
+      darkTheme = !darkTheme;
 
-    if (darkTheme) {
-      htmlElement.classList.add('dark');
-      button.textContent = 'Light mode';
-      localStorage.theme = 'dark';
-    } else {
-      htmlElement.classList.remove('dark');
-      button.textContent = 'Dark mode';
-      localStorage.theme = 'light';
-    }
+      if (darkTheme) {
+        htmlElement.classList.add('dark');
+        btn.textContent = 'Light mode';
+        localStorage.theme = 'dark';
+      } else {
+        htmlElement.classList.remove('dark');
+        btn.textContent = 'Dark mode';
+        localStorage.theme = 'light';
+      }
+    });
   });
 }

@@ -1,16 +1,18 @@
 <ul class="flex items-center justify-end">
   {{ $currentPage := . }}
   {{ range .Site.Menus.main }}
-    <li>
-      <a
-        class="little-text px-4 py-2 mob-px-3 mob-py-1 {{ if or ($currentPage.IsMenuCurrent "main" .) ($currentPage.HasMenuCurrent "main" .) }}
-          active
-        {{ end }}
+    {{ if le .Weight 30 }}
+      <li>
+        <a
+          class="little-text px-4 py-2 mob-px-3 mob-py-1 {{ if or ($currentPage.IsMenuCurrent "main" .) ($currentPage.HasMenuCurrent "main" .) }}
+            active
+          {{ end }}
         "
-        href="{{ .URL }}">
-        {{ .Name }}
-      </a>
-    </li>
+          href="{{ .URL }}">
+          {{ .Name }}
+        </a>
+      </li>
+    {{ end }}
   {{ end }}
   <span class="dt secondary-clr pl-4">~~</span>
 </ul>

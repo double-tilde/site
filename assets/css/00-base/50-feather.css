@@ -12,3 +12,8 @@
   width: auto;
   stroke: var(--secondary-clr);
 }
+
+.feather.feather-menu {
+  height: 20px;
+  width: auto;
+}
