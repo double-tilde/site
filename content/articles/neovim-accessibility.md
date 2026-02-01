@@ -40,7 +40,7 @@ When I really got used to this plugin it was magical. Vim motions are great, but
 
 As you might be able to tell, I hate visual search fatigue. Seeing a wall of text like the one below, knowing there is a word I am looking for, but not being able to see it, frustrates me. This plugin basically removes all of that. If I know I need to update the paragraph with the word "computer" in it, I can just start searching for that word with Flash, it will highlight it and provide a shortcut to take me there.
 
-![Flash](/images/2026-01-30-flash-nvim.gif "Flash")
+![Flash](/images/2026-01-30-flash-nvim.webp "Flash")
 
 ### Stay Centered
 
@@ -48,7 +48,7 @@ As you might be able to tell, I hate visual search fatigue. Seeing a wall of tex
 
 I love this plugin, I like to keep my eyes in one place on the screen and have the code I am looking for appear in my view as I use shortcuts or search tools to find it. It's the same reason I use [rofi as an app launcher and search tool](/articles/2025-10-17-rofi-app-launcher-web-search-tool/) - I press a shortcut, the rofi search box appears in the middle of my screen, I search for what I need and continue. No search fatigue from looking around my desktop for an application or inside a file manager for a file. It may only save me a second or two, but it helps me to stay focused.
 
-![Stay Centered](/images/2026-01-30-stay-centered.gif "Stay Centered")
+![Stay Centered](/images/2026-01-30-stay-centered.webp "Stay Centered")
 ### Snacks Picker
 
 [Snacks](https://github.com/folke/snacks.nvim/tree/main) is collection of smaller plugins, one of these is [Snacks Picker](https://github.com/folke/snacks.nvim/blob/main/docs/picker.md), it continues the theme of my "search first" setup. Snacks lets you set up various shortcuts to search for whatever you like. I use the "smart find files", "grep", and "buffers" search functionality the most. Having these search modes separated is really useful because you don't need to sift through files when you are looking for a keyword, or all of your files when you are looking for a file you were just working in.
