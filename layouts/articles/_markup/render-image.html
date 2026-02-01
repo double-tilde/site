@@ -8,10 +8,12 @@
 
 {{ $img := resources.Get $dest }}
 
-{{ if and $img (ne $width "") }}
-  {{ $img = $img.Resize (printf "%sx webp q100" $width) }}
-{{ else if $img }}
-  {{ $img = $img.Resize (printf "%dx webp q100" $img.Width) }}
+{{ if not (hasSuffix $img "webp") }}
+  {{ if and $img (ne $width "") }}
+    {{ $img = $img.Resize (printf "%sx webp q100" $width) }}
+  {{ else if $img }}
+    {{ $img = $img.Resize (printf "%dx webp q100" $img.Width) }}
+  {{ end }}
 {{ end }}
 
 
