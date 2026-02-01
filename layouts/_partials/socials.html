@@ -1,19 +1,22 @@
 <div class="flex items-center justify-between g-8 mob-flex-col mob-items-start">
   <div class="socials" aria-label="socials">
     <h2>Find Me Online</h2>
-    {{ range .Site.Params.socials.entry }}
-      <p class="flex items-center secondary-stroke">
-        <i class="mr-3" data-feather="{{ .logo }}"></i>
-        <a
-          href="{{ .href }}"
-          aria-label="{{ .label }}"
-          rel="external nofollow noopener noreferrer"
-          target="_blank"
-          class="styled-link flex items-center">
-          {{ .label }}<i class="mb-1" data-feather="arrow-up-right"></i>
-        </a>
-      </p>
-    {{ end }}
+    <ul>
+      {{ range .Site.Params.socials.entry }}
+        <li class="mb-4 flex items-center g-3 secondary-stroke">
+          <i data-feather="{{ .logo }}"></i>
+          <a
+            href="{{ .href }}"
+            aria-label="{{ .label }}"
+            rel="external nofollow noopener noreferrer"
+            target="_blank"
+            class="styled-link">
+            {{ .label }}
+            <i class="mb-1" data-feather="arrow-up-right"></i
+          ></a>
+        </li>
+      {{ end }}
+    </ul>
   </div>
   {{ $img := resources.Get "/images/about-rosie.jpg" }}
   {{ if ne .MediaType.SubType "svg" }}
