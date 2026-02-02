@@ -5,13 +5,11 @@ function closeMenuAfterScroll(link, menu) {
       let urlHash = link.hash;
       let res = urlClean.slice(0, -urlHash.length);
 
-      console.log(res);
-      console.log(window.location.href);
-
       if (res == window.location.href) {
         e.preventDefault();
-        if (urlHash) {
-          urlHash.scrollIntoView({ behavior: 'smooth' });
+        let elem = document.querySelector(urlHash);
+        if (elem) {
+          elem.scrollIntoView({ behavior: 'smooth' });
           setTimeout(() => {
             menu.classList.remove('mobile-animate');
           }, 100);
@@ -19,7 +17,6 @@ function closeMenuAfterScroll(link, menu) {
         return;
       }
     }
-
     if (link.href !== window.location.href) {
       window.location.href = link.href;
       return;
