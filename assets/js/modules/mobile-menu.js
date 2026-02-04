@@ -1,11 +1,19 @@
 function closeMenuAfterScroll(link, menu) {
   link.addEventListener('click', (e) => {
     if (link.hash) {
-      let urlClean = link.href;
+      let urlHref = link.href;
       let urlHash = link.hash;
-      let res = urlClean.slice(0, -urlHash.length);
+      let urlClean = urlHref.slice(0, -urlHash.length);
 
-      if (res == window.location.href) {
+      let windowHref = window.location.href;
+      let windowHash = window.location.hash;
+      let windowClean = windowHref;
+      if (windowHash) {
+        windowClean = windowHref.slice(0, -windowHash.length);
+      }
+
+      // if the id element is on the current page
+      if (urlClean == windowClean) {
         e.preventDefault();
         let elem = document.querySelector(urlHash);
         if (elem) {
@@ -14,6 +22,7 @@ function closeMenuAfterScroll(link, menu) {
             menu.classList.remove('mobile-animate');
           }, 100);
         }
+        window.location.href = link.href;
         return;
       }
     }
