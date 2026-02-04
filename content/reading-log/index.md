@@ -10,6 +10,10 @@ I usually add longer articles here or articles that really intrigued me, rather 
 
 ### 2026
 
+#### February
+
+- [The rise of Moltbook suggests viral AI prompts may be the next big security threat - Benji Edwards](https://arstechnica.com/ai/2026/02/the-rise-of-moltbook-suggests-viral-ai-prompts-may-be-the-next-big-security-threat/) {{< info "article" >}} {{< info "ars-technica" >}} {{< info "ai" >}} {{< info "security" >}}
+
 #### January
 
 - [Yes, It’s Fascism](https://www.theatlantic.com/ideas/2026/01/america-fascism-trump-maga-ice/685751/) {{< info "article" >}} {{< info "the-atlantic" >}} {{< info "politics" >}} {{< info "usa" >}}
@@ -30,7 +34,7 @@ I usually add longer articles here or articles that really intrigued me, rather 
 #### November
 
 - [Practically-A-Book Review: Rootclaim $100,000 Lab Leak Debate - Astral Codex Ten](https://www.astralcodexten.com/p/practically-a-book-review-rootclaim) {{< info "review" >}} {{< info "substack" >}} {{< info "covid" >}} {{< info "debate" >}}
-- [Cloudflare outage on November 18, 2025 - Matthew Prince](https://blog.cloudflare.com/18-november-2025-outage/) {{< info "article" >}} {{< info "cloudflare" >}} {{< info "security" >}} {{< info "ai-ml" >}}
+- [Cloudflare outage on November 18, 2025 - Matthew Prince](https://blog.cloudflare.com/18-november-2025-outage/) {{< info "article" >}} {{< info "cloudflare" >}} {{< info "security" >}} {{< info "ai" >}}
 - [Alchemy - Josh Collinsworth](https://joshcollinsworth.com/blog/alchemy) {{< info "article" >}} {{< info "blog" >}} {{< info "ai" >}} {{< info "art" >}}
 
 #### October
