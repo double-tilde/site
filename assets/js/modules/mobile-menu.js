@@ -1,4 +1,4 @@
-function closeMenuAfterScroll(link, menu) {
+function closeMenuAfterScroll(link, menu, openBtn) {
   link.addEventListener('click', (e) => {
     if (link.hash) {
       let urlHref = link.href;
@@ -14,6 +14,9 @@ function closeMenuAfterScroll(link, menu) {
 
       // if the id element is on the current page
       if (urlClean == windowClean) {
+        let isExpanded = openBtn.getAttribute('aria-expanded') === 'true';
+        openBtn.setAttribute('aria-expanded', !isExpanded);
+
         e.preventDefault();
         let elem = document.querySelector(urlHash);
         if (elem) {
@@ -49,7 +52,7 @@ export function toggleMobileMenu() {
   });
 
   mobileLinks.forEach((link) => {
-    closeMenuAfterScroll(link, navMobile);
+    closeMenuAfterScroll(link, navMobile, mobileOpenBtn);
   });
 
   mobileOpenBtn.addEventListener('click', () => {
