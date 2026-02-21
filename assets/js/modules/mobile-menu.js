@@ -42,6 +42,9 @@ export function toggleMobileMenu() {
   mobileCloseBtn.forEach((btn) => {
     btn.addEventListener('click', () => {
       navMobile.classList.remove('mobile-animate');
+
+      let isExpanded = mobileOpenBtn.getAttribute('aria-expanded') === 'true';
+      mobileOpenBtn.setAttribute('aria-expanded', !isExpanded);
     });
   });
 
@@ -51,5 +54,8 @@ export function toggleMobileMenu() {
 
   mobileOpenBtn.addEventListener('click', () => {
     navMobile.classList.add('mobile-animate');
+
+    let isExpanded = mobileOpenBtn.getAttribute('aria-expanded') === 'true';
+    mobileOpenBtn.setAttribute('aria-expanded', !isExpanded);
   });
 }
