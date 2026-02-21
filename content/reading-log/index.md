@@ -12,7 +12,7 @@ I usually add longer articles here or articles that really intrigued me, rather 
 
 #### February
 
-- [Ivermectin: Much More Than You Wanted To Know - Astral Codex Ten](https://www.astralcodexten.com/p/ivermectin-much-more-than-you-wanted) {{< info "article" >}} {{< info "substack" >}} {{< info "covid" >}} {{< info "medicine" >}})
+- [Ivermectin: Much More Than You Wanted To Know - Astral Codex Ten](https://www.astralcodexten.com/p/ivermectin-much-more-than-you-wanted) {{< info "article" >}} {{< info "substack" >}} {{< info "covid" >}} {{< info "medicine" >}}
 - [Vaccines and the Tightrope of Progress - Richard Hanania](https://www.richardhanania.com/p/vaccines-and-the-tightrope-of-progress) {{< info "blog" >}} {{< info "substack" >}} {{< info "vaccines" >}} {{< info "politics" >}}
 - [Vibe Coding Is Killing Open Source Software, Researchers Argue](https://www.404media.co/vibe-coding-is-killing-open-source-software-researchers-argue/) {{< info "article" >}} {{< info "404media" >}} {{< info "ai" >}} {{< info "oss" >}}
 - [The rise of Moltbook suggests viral AI prompts may be the next big security threat - Benji Edwards](https://arstechnica.com/ai/2026/02/the-rise-of-moltbook-suggests-viral-ai-prompts-may-be-the-next-big-security-threat/) {{< info "article" >}} {{< info "ars-technica" >}} {{< info "ai" >}} {{< info "security" >}}
