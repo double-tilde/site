@@ -1256,6 +1256,20 @@ article {
   min-height: 100%;
 }
 
+/* Object fit */
+
+.object-contain {
+  object-fit: contain;
+}
+
+.object-cover {
+  object-fit: cover;
+}
+
+.object-fill {
+  object-fit: fill;
+}
+
 /* Centering */
 
 .text-center {
@@ -1263,6 +1277,7 @@ article {
 }
 
 /* Borders */
+
 .solid-border {
   border: 2px solid var(--primary-accent-clr);
   border-radius: var(--root-1);

@@ -68,9 +68,15 @@
         {{ $img = $img.Resize (printf "%dx webp q100" $img.Width) }}
       {{ end }}
 
+      {{ $contain := .Params.image_contain }}
+      {{ $containClass := "object-contain" }}
+      {{ if not $contain }}
+        {{ $containClass = "object-cover" }}
+      {{ end }}
+
       {{ with $img }}
         <img
-          {{ if .Params.image_contain }}style="object-fit: contain;"{{ end }}
+          class="{{ $containClass }}"
           src="{{ .RelPermalink }}"
           alt="{{ .Params.image_alt }}"
           loading="lazy"
