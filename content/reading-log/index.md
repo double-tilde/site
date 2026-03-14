@@ -12,6 +12,7 @@ I usually add longer articles here or articles that really intrigued me, rather 
 
 #### March
 
+- [Moral progress is annoying - Daniel Kelly](https://aeon.co/essays/why-does-moral-progress-feel-preachy-and-annoying) {{< info "essay" >}} {{< info "aeon" >}} {{< info "psychology" >}} {{< info "ethics" >}}
 - [The new astrology - Alan Jay Levinovitz](https://aeon.co/essays/how-economists-rode-maths-to-become-our-era-s-astrologers) {{< info "essay" >}} {{< info "aeon" >}} {{< info "economics" >}} {{< info "mathematics" >}}
 
 #### February
