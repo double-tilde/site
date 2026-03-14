@@ -10,6 +10,10 @@ I usually add longer articles here or articles that really intrigued me, rather 
 
 ### 2026
 
+#### March
+
+- [The new astrology - Alan Jay Levinovitz](https://aeon.co/essays/how-economists-rode-maths-to-become-our-era-s-astrologers) {{< info "essay" >}} {{< info "aeon" >}} {{< info "economics" >}} {{< info "mathematics" >}}
+
 #### February
 
 - [Going-against-the-grainers - Dane Leigh Gogoshin](https://aeon.co/essays/how-do-some-people-manage-to-go-against-the-moral-grain) {{< info "essay" >}} {{< info "aeon" >}} {{< info "philosophy" >}} {{< info "morality" >}}
