@@ -10,6 +10,14 @@ I usually add longer articles here or articles that really intrigued me, rather 
 
 ### 2026
 
+#### May
+
+- [Thoughts on slowing the fuck down - Mario Zechner](https://mariozechner.at/posts/2026-03-25-thoughts-on-slowing-the-fuck-down/) {{< info "article" >}} {{< info "blog" >}} {{< info "ai" >}} {{< info "development" >}}
+
+#### April
+
+- [The rise of Linux desktop is inevitable — it’s time music software developers got on board - Adam Crute](https://musictech.com/features/opinion-analysis/the-rise-of-linux-desktop-is-inevitable-its-time-music-software-developers-got-on-board/) {{< info "article" >}} {{< info "music-tech" >}} {{< info "linux" >}} {{< info "music" >}}
+
 #### March
 
 - [No rest - Alicia Puglionesi](https://aeon.co/essays/the-rest-cure-challenges-cherished-myths-about-a-working-body) {{< info "essay" >}} {{< info "aeon" >}} {{< info "illness" >}} {{< info "work" >}}
