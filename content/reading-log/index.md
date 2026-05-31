@@ -12,6 +12,7 @@ I usually add longer articles here or articles that really intrigued me, rather 
 
 #### May
 
+- [Agentic Coding is a Trap - Lars Faye](https://larsfaye.com/articles/agentic-coding-is-a-trap) {{< info "article" >}} {{< info "blog" >}} {{< info "ai" >}} {{< info "development" >}}
 - [Anthropic's "Profitability" Swindle - Ed Zitron](https://www.wheresyoured.at/anthropics-profitability-swindle/) {{< info "article" >}} {{< info "blog" >}} {{< info "ai" >}} {{< info "economics" >}}
 - [Thoughts on slowing the fuck down - Mario Zechner](https://mariozechner.at/posts/2026-03-25-thoughts-on-slowing-the-fuck-down/) {{< info "article" >}} {{< info "blog" >}} {{< info "ai" >}} {{< info "development" >}}
 
