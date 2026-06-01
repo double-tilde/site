@@ -128,19 +128,24 @@ hr {
   position: relative;
   margin-bottom: var(--root-4);
   height: 1rem;
-  border-bottom: 2px solid var(--primary-accent-clr);
   border: none;
+  border-bottom: 2px solid var(--primary-accent-clr);
+  overflow: visible;
 }
 
 hr::after {
   content: "~~";
   position: absolute;
+  top: 7px;
+  left: calc(50% - var(--root-5));
   display: flex;
-  width: 100%;
   justify-content: center;
   align-items: center;
-  color: var(--white-clr);
+  width: var(--root-8);
+  height: 1rem;
+  color: var(--secondary-clr);
   background-color: var(--gray-clr);
+  font-size: var(--root-7);
 }
 
 hr:nth-of-type(even) {
