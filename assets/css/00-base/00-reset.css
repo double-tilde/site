@@ -144,8 +144,12 @@ hr::after {
   width: var(--root-8);
   height: 1rem;
   color: var(--secondary-clr);
-  background-color: var(--gray-clr);
+  background-color: var(--bg-clr);
   font-size: var(--root-7);
+}
+
+article hr::after {
+  background-color: var(--gray-clr);
 }
 
 hr:nth-of-type(even) {
