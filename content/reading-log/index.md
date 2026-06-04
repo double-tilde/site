@@ -10,6 +10,10 @@ I usually add longer articles here or articles that really intrigued me, rather 
 
 ### 2026
 
+#### June
+
+- [Computers can’t surprise - Richard Beard](https://aeon.co/essays/sure-ai-can-do-writing-but-memoir-not-so-much) {{< info "essay" >}} {{< info "aeon" >}} {{< info "ai" >}} {{< info "art" >}}
+
 #### May
 
 - [Agentic Coding is a Trap - Lars Faye](https://larsfaye.com/articles/agentic-coding-is-a-trap) {{< info "article" >}} {{< info "blog" >}} {{< info "ai" >}} {{< info "development" >}}
