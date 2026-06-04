@@ -1,5 +1,10 @@
 .typing {
 	.words {
+		display: flex;
 		flex-wrap: wrap;
+
+		p {
+			margin-bottom: 0;
+		}
 	}
 }

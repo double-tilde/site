@@ -1,4 +1,3 @@
-
 function stringToHTML(str) {
   const parser = new DOMParser();
   const doc = parser.parseFromString(str, 'text/html');
@@ -60,24 +59,34 @@ export function typingGame() {
   ];
 
   if (page != null && words != null) {
-    const testArr = [];
+    let span;
 
     for (const word of wordsArr) {
-      const node = stringToHTML(`${word} `);
-      words.appendChild(node);
+      const para = stringToHTML('<p>');
+      words.appendChild(para);
 
-      testArr.push(word);
-    }
-
-    for (const word of testArr) {
       for (const letter of word) {
-        document.addEventListener('keydown', (event) => {
-          if (event.key == letter) {
-            console.log(letter);
-          }
-        });
+        span = stringToHTML(`<span>${letter}</span>`);
+        para.appendChild(span);
       }
     }
+
+    let pos = 0;
+    let idx = 0;
+    document.addEventListener('keydown', (event) => {
+      let word = words.childNodes[idx].innerText;
+
+      if (event.key == word[pos]) {
+        console.log(event.key);
+        pos++;
+      }
+
+      if (word.length == pos) {
+        pos = 0;
+        idx++;
+      }
+    });
+
     //   init();
   }
 }
