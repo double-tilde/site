@@ -48,22 +48,22 @@ title = 'Double Tilde'
     weight = 60
 
   [[menus.footer]]
-    name = 'Home'
-    pageRef = 'home'
-    url = '/'
-    weight = 10
-
-  [[menus.footer]]
     name = 'About'
     pageRef = 'about'
     url = '/about'
-    weight = 20
+    weight = 10
 
   [[menus.footer]]
     name = 'Projects'
     pageRef = 'projects'
     url = '/about/#projects'
-    weight = 30
+    weight = 20
+
+  [[menus.footer]]
+    name = 'Games'
+    pageRef = 'games'
+    url = '/games'
+    weight = 20
 
   [[menus.footer]]
     name = 'Back to Top'
