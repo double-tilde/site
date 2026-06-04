@@ -5,6 +5,20 @@
 
 		p {
 			margin-bottom: 0;
+			font-family: var(--mono-font);
+			font-size: var(--root-6);
+		}
+
+		span {
+			font: inherit;
 		}
 	}
+}
+
+.correct {
+	color: var(--secondary-clr);
+}
+
+.incorrect {
+	color: var(--primary-clr);
 }

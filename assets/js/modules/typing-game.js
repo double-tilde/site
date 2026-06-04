@@ -59,29 +59,43 @@ export function typingGame() {
   ];
 
   if (page != null && words != null) {
-    let span;
-
     for (const word of wordsArr) {
       const para = stringToHTML('<p>');
       words.appendChild(para);
 
       for (const letter of word) {
-        span = stringToHTML(`<span>${letter}</span>`);
+        const span = stringToHTML(`<span>${letter}</span>`);
         para.appendChild(span);
       }
+
+      const space = stringToHTML(`<span>&nbsp;</span>`);
+      para.appendChild(space);
     }
 
-    let pos = 0;
     let idx = 0;
-    document.addEventListener('keydown', (event) => {
-      let word = words.childNodes[idx].innerText;
+    let pos = 0;
 
-      if (event.key == word[pos]) {
-        console.log(event.key);
+    document.addEventListener('keydown', (event) => {
+      let word = words.childNodes[idx];
+      let letter = word.childNodes[pos];
+
+      if (event.key == letter.innerText) {
+        letter.classList.add('correct');
+        pos++;
+      } else if (event.key == 'Backspace') {
+        if (pos > 0) {
+          pos--;
+        } else {
+          pos = 0;
+        }
+        letter.classList.remove('correct');
+        letter.classList.remove('incorrect');
+      } else if (event.key != letter.innerText) {
+        letter.classList.add('incorrect');
         pos++;
       }
 
-      if (word.length == pos) {
+      if (word.childNodes.length == pos) {
         pos = 0;
         idx++;
       }
