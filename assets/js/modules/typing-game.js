@@ -58,6 +58,8 @@ export function typingGame() {
     'gym',
   ];
 
+  const cursor = document.getElementById('cursor');
+
   if (page != null && words != null) {
     for (const word of wordsArr) {
       const para = stringToHTML('<p>');
@@ -78,27 +80,46 @@ export function typingGame() {
     document.addEventListener('keydown', (event) => {
       let word = words.childNodes[idx];
       let letter = word.childNodes[pos];
+      let letterWidth = letter.offsetWidth;
+      let cursorPosition = parseInt(cursor.style.left, 10) || 0;
 
-      if (event.key == letter.innerText) {
-        letter.classList.add('correct');
-        pos++;
-      } else if (event.key == 'Backspace') {
-        if (pos > 0) {
-          pos--;
+      if (event.key == 'Backspace') {
+        if (pos == 0 && idx > 0) {
+          idx--;
+          word = words.childNodes[idx];
+          pos = word.childNodes.length - 1;
+          letter = word.childNodes[pos];
         } else {
-          pos = 0;
+          if (pos > 0) {
+            pos--;
+          } else {
+            pos = 0;
+          }
+          word = words.childNodes[idx];
+          letter = word.childNodes[pos];
         }
+        cursor.style.left = cursorPosition - letterWidth + 'px';
         letter.classList.remove('correct');
         letter.classList.remove('incorrect');
+        return;
+      } else if (event.key == letter.innerText) {
+        letter.classList.add('correct');
+        cursor.style.left = cursorPosition + letterWidth + 'px';
+      } else if (event.code == 'Space' && pos == word.childNodes.length - 1) {
+        letter.classList.add('correct');
+        cursor.style.left = cursorPosition + letterWidth + 'px';
       } else if (event.key != letter.innerText) {
         letter.classList.add('incorrect');
-        pos++;
+        cursor.style.left = cursorPosition + letterWidth + 'px';
       }
 
-      if (word.childNodes.length == pos) {
+      if (word.childNodes.length - 1 <= pos) {
         pos = 0;
         idx++;
+        return;
       }
+
+      pos++;
     });
 
     //   init();
