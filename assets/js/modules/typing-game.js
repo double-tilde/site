@@ -78,6 +78,8 @@ export function typingGame() {
     let pos = 0;
 
     document.addEventListener('keydown', (event) => {
+cursor.classList.remove("cursor-animate")
+
       let word = words.childNodes[idx];
       let letter = word.childNodes[pos];
       let letterWidth = letter.offsetWidth;
