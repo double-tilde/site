@@ -4,6 +4,13 @@ function stringToHTML(str) {
   return doc.body.firstChild;
 }
 
+function startTimer(countdown) {
+  setInterval(() => {
+    countdown = countdown - 1;
+    console.log(countdown);
+  }, 1000);
+}
+
 export function typingGame() {
   const page = document.getElementById('typing');
   const words = document.querySelector('.words');
@@ -68,6 +75,7 @@ export function typingGame() {
   ];
 
   const cursor = document.getElementById('cursor');
+  let countdown = 30;
 
   if (page != null && words != null) {
     for (const word of wordsArr) {
@@ -85,6 +93,7 @@ export function typingGame() {
 
     let idx = 0;
     let pos = 0;
+    let keypress = 0;
 
     document.addEventListener('keydown', (event) => {
       if (event.key == 'Space') {
@@ -102,6 +111,12 @@ export function typingGame() {
         event.preventDefault();
         return;
       }
+
+      if (keypress == 0) {
+        startTimer(countdown);
+      }
+      keypress++;
+      console.log(keypress);
 
       cursor.classList.remove('cursor-animate');
 
@@ -150,7 +165,6 @@ export function typingGame() {
 
       pos++;
     });
-
-    //   init();
   }
+  //   init();
 }
