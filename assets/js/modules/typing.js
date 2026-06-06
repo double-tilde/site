@@ -56,6 +56,15 @@ export function typingGame() {
     'keyboard',
     'pedal',
     'gym',
+    'laptop',
+    'source',
+    'build',
+    'internet',
+    'machine',
+    'theory',
+    'try',
+    'interest',
+    'css',
   ];
 
   const cursor = document.getElementById('cursor');
@@ -78,7 +87,23 @@ export function typingGame() {
     let pos = 0;
 
     document.addEventListener('keydown', (event) => {
-cursor.classList.remove("cursor-animate")
+      if (event.key == 'Space') {
+        event.preventDefault();
+      }
+
+      if (
+        event.key == 'Alt' ||
+        event.key == 'Control' ||
+        event.key == 'Escape' ||
+        event.key == 'Meta' ||
+        event.key == 'Tab' ||
+        event.key == 'Shift'
+      ) {
+        event.preventDefault();
+        return;
+      }
+
+      cursor.classList.remove('cursor-animate');
 
       let word = words.childNodes[idx];
       let letter = word.childNodes[pos];
@@ -91,26 +116,28 @@ cursor.classList.remove("cursor-animate")
           word = words.childNodes[idx];
           pos = word.childNodes.length - 1;
           letter = word.childNodes[pos];
+        } else if (pos > 0) {
+          pos--;
         } else {
-          if (pos > 0) {
-            pos--;
-          } else {
-            pos = 0;
-          }
-          word = words.childNodes[idx];
-          letter = word.childNodes[pos];
+          pos = 0;
         }
-        cursor.style.left = cursorPosition - letterWidth + 'px';
+        word = words.childNodes[idx];
+        letter = word.childNodes[pos];
+        if (cursorPosition > 0) {
+          cursor.style.left = cursorPosition - letterWidth + 'px';
+        }
         letter.classList.remove('correct');
         letter.classList.remove('incorrect');
         return;
-      } else if (event.key == letter.innerText) {
+      }
+
+      if (
+        event.key == letter.innerText ||
+        (event.code == 'Space' && pos == word.childNodes.length - 1)
+      ) {
         letter.classList.add('correct');
         cursor.style.left = cursorPosition + letterWidth + 'px';
-      } else if (event.code == 'Space' && pos == word.childNodes.length - 1) {
-        letter.classList.add('correct');
-        cursor.style.left = cursorPosition + letterWidth + 'px';
-      } else if (event.key != letter.innerText) {
+      } else {
         letter.classList.add('incorrect');
         cursor.style.left = cursorPosition + letterWidth + 'px';
       }

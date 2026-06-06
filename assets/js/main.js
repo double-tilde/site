@@ -3,7 +3,7 @@ import { mainHeight } from './modules/main-height.js';
 import { copyCode } from './modules/copy-code.js';
 import { copyHeadingLink } from './modules/copy-heading-link.js';
 import { darkModeToggle } from './modules/dark-mode-toggle.js';
-import { typingGame } from './modules/typing-game.js';
+import { typingGame } from './modules/typing.js';
 import { toggleMobileMenu } from './modules/mobile-menu.js';
 import { Scroller } from './modules/scroller.js';
 

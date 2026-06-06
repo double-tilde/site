@@ -37,6 +37,7 @@
 		left: 0;
 		background-color: var(--text-clr);
 		border-radius: var(--root-1);
+		transition: all 75ms linear;
 	}
 }
 
