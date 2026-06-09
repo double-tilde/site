@@ -1,14 +1,24 @@
+let PLAYING = true;
+let COUNTDOWN = 10;
+let intervalID;
+
 function stringToHTML(str) {
   const parser = new DOMParser();
   const doc = parser.parseFromString(str, 'text/html');
   return doc.body.firstChild;
 }
 
-function startTimer(countdown) {
-  setInterval(() => {
-    countdown = countdown - 1;
-    console.log(countdown);
-  }, 1000);
+function startTimer() {
+  if (PLAYING) {
+    intervalID = setInterval(() => {
+      COUNTDOWN = COUNTDOWN - 1;
+      console.log(COUNTDOWN);
+      if (COUNTDOWN <= 0) {
+        PLAYING = false;
+        clearInterval(intervalID);
+      }
+    }, 1000);
+  }
 }
 
 export function typingGame() {
@@ -72,10 +82,10 @@ export function typingGame() {
     'try',
     'interest',
     'css',
+    'aeons',
   ];
 
   const cursor = document.getElementById('cursor');
-  let countdown = 30;
 
   if (page != null && words != null) {
     for (const word of wordsArr) {
@@ -112,58 +122,60 @@ export function typingGame() {
         return;
       }
 
-      if (keypress == 0) {
-        startTimer(countdown);
-      }
-      keypress++;
-      console.log(keypress);
+      if (PLAYING) {
+        if (keypress == 0) {
+          startTimer();
+        }
+        keypress++;
+        console.log(keypress);
 
-      cursor.classList.remove('cursor-animate');
+        cursor.classList.remove('cursor-animate');
 
-      let word = words.childNodes[idx];
-      let letter = word.childNodes[pos];
-      let letterWidth = letter.offsetWidth;
-      let cursorPosition = parseInt(cursor.style.left, 10) || 0;
+        let word = words.childNodes[idx];
+        let letter = word.childNodes[pos];
+        let letterWidth = letter.offsetWidth;
+        let cursorPosition = parseInt(cursor.style.left, 10) || 0;
 
-      if (event.key == 'Backspace') {
-        if (pos == 0 && idx > 0) {
-          idx--;
+        if (event.key == 'Backspace') {
+          if (pos == 0 && idx > 0) {
+            idx--;
+            word = words.childNodes[idx];
+            pos = word.childNodes.length - 1;
+            letter = word.childNodes[pos];
+          } else if (pos > 0) {
+            pos--;
+          } else {
+            pos = 0;
+          }
           word = words.childNodes[idx];
-          pos = word.childNodes.length - 1;
           letter = word.childNodes[pos];
-        } else if (pos > 0) {
-          pos--;
+          if (cursorPosition > 0) {
+            cursor.style.left = cursorPosition - letterWidth + 'px';
+          }
+          letter.classList.remove('correct');
+          letter.classList.remove('incorrect');
+          return;
+        }
+
+        if (
+          event.key == letter.innerText ||
+          (event.code == 'Space' && pos == word.childNodes.length - 1)
+        ) {
+          letter.classList.add('correct');
+          cursor.style.left = cursorPosition + letterWidth + 'px';
         } else {
+          letter.classList.add('incorrect');
+          cursor.style.left = cursorPosition + letterWidth + 'px';
+        }
+
+        if (word.childNodes.length - 1 <= pos) {
           pos = 0;
+          idx++;
+          return;
         }
-        word = words.childNodes[idx];
-        letter = word.childNodes[pos];
-        if (cursorPosition > 0) {
-          cursor.style.left = cursorPosition - letterWidth + 'px';
-        }
-        letter.classList.remove('correct');
-        letter.classList.remove('incorrect');
-        return;
-      }
 
-      if (
-        event.key == letter.innerText ||
-        (event.code == 'Space' && pos == word.childNodes.length - 1)
-      ) {
-        letter.classList.add('correct');
-        cursor.style.left = cursorPosition + letterWidth + 'px';
-      } else {
-        letter.classList.add('incorrect');
-        cursor.style.left = cursorPosition + letterWidth + 'px';
+        pos++;
       }
-
-      if (word.childNodes.length - 1 <= pos) {
-        pos = 0;
-        idx++;
-        return;
-      }
-
-      pos++;
     });
   }
   //   init();
