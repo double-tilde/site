@@ -4,11 +4,14 @@
 	.words {
 		display: flex;
 		flex-wrap: wrap;
+		font-family: var(--mono-font);
+		font-size: 35px;
+		height: 3lh;
+		overflow: hidden;
 
 		p {
 			margin-bottom: 0;
-			font-family: var(--mono-font);
-			font-size: 35px;
+			font: inherit;
 		}
 
 		span {

@@ -1,5 +1,6 @@
 let PLAYING = true;
-let COUNTDOWN = 10;
+// TODO: change to 30
+let COUNTDOWN = 500;
 let intervalID;
 
 function stringToHTML(str) {
@@ -12,7 +13,6 @@ function startTimer() {
   if (PLAYING) {
     intervalID = setInterval(() => {
       COUNTDOWN = COUNTDOWN - 1;
-      console.log(COUNTDOWN);
       if (COUNTDOWN <= 0) {
         PLAYING = false;
         clearInterval(intervalID);
@@ -83,9 +83,18 @@ export function typingGame() {
     'interest',
     'css',
     'aeons',
+    'neo',
+    'enjoy',
+    'travel',
+    'interface',
+    'focus',
+    'log',
+    'space',
+    'nebula',
+    'tech',
+    'program',
+    'crafting',
   ];
-
-  const cursor = document.getElementById('cursor');
 
   if (page != null && words != null) {
     for (const word of wordsArr) {
@@ -101,9 +110,11 @@ export function typingGame() {
       para.appendChild(space);
     }
 
+    const cursor = document.getElementById('cursor');
     let idx = 0;
     let pos = 0;
     let keypress = 0;
+    let topRow = [];
 
     document.addEventListener('keydown', (event) => {
       if (event.key == 'Space') {
@@ -127,7 +138,7 @@ export function typingGame() {
           startTimer();
         }
         keypress++;
-        console.log(keypress);
+        // console.log(keypress);
 
         cursor.classList.remove('cursor-animate');
 
@@ -168,12 +179,29 @@ export function typingGame() {
           cursor.style.left = cursorPosition + letterWidth + 'px';
         }
 
+        console.log('tr', topRow);
+        if (word.offsetTop == 0) {
+          let prev;
+          if (topRow.length > 0) {
+            prev = topRow.at(-1);
+          }
+
+          if (prev != word) {
+            topRow.push(word);
+          }
+        } else {
+          for (const el of topRow) {
+            el.style.display = 'none';
+          }
+          topRow = [];
+          cursor.style.left = letterWidth + 'px';
+        }
+
         if (word.childNodes.length - 1 <= pos) {
           pos = 0;
           idx++;
           return;
         }
-
         pos++;
       }
     });
