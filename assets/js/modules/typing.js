@@ -168,7 +168,17 @@ export function typingGame() {
           return;
         }
 
+        let next = words.childNodes[idx + 1];
         if (
+          word.offsetTop == 0 &&
+          next.offsetTop != 0 &&
+          pos == word.childNodes.length - 1
+        ) {
+          if (event.code == 'Space' && pos == word.childNodes.length - 1) {
+            letter.classList.add('correct');
+            cursor.style.left = '0px';
+          }
+        } else if (
           event.key == letter.innerText ||
           (event.code == 'Space' && pos == word.childNodes.length - 1)
         ) {
@@ -189,12 +199,13 @@ export function typingGame() {
           if (prev != word) {
             topRow.push(word);
           }
-        } else {
+        }
+
+        if (next.offsetTop != 0 && pos == word.childNodes.length - 1) {
           for (const el of topRow) {
             el.style.display = 'none';
           }
           topRow = [];
-          cursor.style.left = letterWidth + 'px';
         }
 
         if (word.childNodes.length - 1 <= pos) {
