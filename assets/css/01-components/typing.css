@@ -45,7 +45,7 @@
 }
 
 
-@keyframes cursorOpacity {
+@keyframes cursorThrob {
 	0% {
 		opacity: 0.1;
 	}
@@ -63,6 +63,6 @@
 	}
 }
 
-.cursor-animate {
-	animation: cursorOpacity 1s infinite;
+.cursor-throb {
+	animation: cursorThrob 1s infinite;
 }
