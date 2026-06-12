@@ -6,9 +6,12 @@ const game = {
   keypress: 0,
   correctPress: 0,
   incorrectPress: 0,
+
+  gameLength: null,
   cursor: null,
   timer: null,
   timerUnits: null,
+
   words: [
     'developer',
     'philosophy',
@@ -90,6 +93,7 @@ const game = {
     'markdown',
     'lazy',
     'config',
+    'deploy',
   ],
 
   init: function () {
@@ -97,6 +101,7 @@ const game = {
     this.timer = document.getElementById('timer');
     this.timerUnits = document.getElementById('timer-units');
 
+    this.gameLength = this.countdown;
     this.timer.innerText = this.countdown;
     this.timerUnits.innerText = 'seconds';
   },
@@ -112,13 +117,10 @@ const game = {
         }
 
         if (this.countdown <= 0) {
+          clearInterval(this.intervalID);
           this.timerUnits.innerText = 'seconds';
           this.playing = false;
-          clearInterval(this.intervalID);
-          console.log('keypress', this.keypress);
-          console.log('correct press', this.correctPress);
-          console.log('incorrect press', this.incorrectPress);
-          this.cursor.style.display = 'none';
+          this.end();
         }
       }, 1000);
     }
@@ -260,6 +262,22 @@ const game = {
       }
     });
   },
+
+  end: function () {
+    console.log('keypress', this.keypress);
+    console.log('correct press', this.correctPress);
+    console.log('incorrect press', this.incorrectPress);
+
+    let correctPercent = calculatePercent(this.keypress, this.correctPress);
+    let incorrectPercent = calculatePercent(this.keypress, this.incorrectPress);
+    let wpm = calculateWPM(this.gameLength, this.correctPress);
+
+    console.log('correct press percent', correctPercent);
+    console.log('incorrect press percent', incorrectPercent);
+    console.log('wpm', wpm);
+
+    this.cursor.style.display = 'none';
+  },
 };
 
 export function typingGame() {
@@ -280,4 +298,27 @@ function stringToHTML(str) {
   const parser = new DOMParser();
   const doc = parser.parseFromString(str, 'text/html');
   return doc.body.firstChild;
+}
+
+function calculatePercent(whole, part) {
+  if (whole == 0 || part == 0) {
+    return 0;
+  }
+
+  let percent = (part / whole) * 100;
+  percent = Math.round(percent * 100) / 100;
+  return percent;
+}
+
+function calculateWPM(gameLength, keypresses) {
+  if (gameLength == 0 || keypresses == 0) {
+    return 0;
+  }
+
+  let averageWordLength = 5;
+  let minuteInSeconds = 60;
+  let result =
+    (keypresses / averageWordLength) * (minuteInSeconds / gameLength);
+  result = Math.round(result);
+  return result;
 }
