@@ -29,3 +29,4 @@ Here's a list of some of the blogs and websites that inspired this one, either t
 - [Digital Ocean Blog](https://www.digitalocean.com/blog)
 - [Kevin Powell](https://www.kevinpowell.co/)
 - [Jon Calhoun](https://www.calhoun.io/)
+- [Sam Who](https://samwho.dev/)
