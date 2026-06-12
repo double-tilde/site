@@ -12,6 +12,7 @@ I usually add longer articles here or articles that really intrigued me, rather 
 
 #### June
 
+- [Britain is wrong to ban speakers like Hasan Piker - Muzzled Britannia](https://www.economist.com/leaders/2026/06/02/britain-is-wrong-to-ban-speakers-like-hasan-piker) {{< info "article" >}} {{< info "the-economist" >}} {{< info "politics" >}} {{< info "free-speech" >}}
 - [Go evolves in the wrong direction - Aliaksandr Valialkin](https://aeon.co/essays/sure-ai-can-do-writing-but-memoir-not-so-much) {{< info "article" >}} {{< info "medium" >}} {{< info "go" >}} {{< info "generics" >}}
 - [Computers can’t surprise - Richard Beard](https://aeon.co/essays/sure-ai-can-do-writing-but-memoir-not-so-much) {{< info "essay" >}} {{< info "aeon" >}} {{< info "ai" >}} {{< info "art" >}}
 
