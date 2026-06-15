@@ -1,3 +1,30 @@
+.typing-section {
+	position: relative;
+
+	.end-display {
+		position: absolute;
+		display: flex;
+		flex-direction: column;
+		top: var(--root--2);
+		left: var(--root--2);
+		width: calc(100% + var(--root-4));
+		height: calc(100% + var(--root-4));
+		background: var(--bg-clr);
+		border-radius: var(--root-1);
+		align-items: center;
+		justify-content: center;
+		gap: var(--root-4);
+		opacity: 0;
+		visibility: hidden;
+		transition: var(--transition-default);
+	}
+
+	.end-display.end {
+		opacity: 0.95;
+		visibility: visible;
+	}
+}
+
 .typing {
 	position: relative;
 
@@ -30,6 +57,10 @@
 		}
 	}
 
+	.words>*.end {
+		filter: blur(3px);
+	}
+
 	.cursor {
 		content: "";
 		position: absolute;
@@ -42,6 +73,7 @@
 		border-radius: var(--root-1);
 		transition: all 75ms linear;
 	}
+
 }
 
 
@@ -61,6 +93,7 @@
 	100% {
 		opacity: 0.1;
 	}
+
 }
 
 .cursor-throb {

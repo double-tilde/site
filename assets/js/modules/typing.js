@@ -1,7 +1,7 @@
 const game = {
   playing: true,
   // TODO: change to 30
-  countdown: 30,
+  countdown: 10,
   intervalID: 0,
   keypress: 0,
   correctPress: 0,
@@ -264,19 +264,27 @@ const game = {
   },
 
   end: function () {
-    console.log('keypress', this.keypress);
-    console.log('correct press', this.correctPress);
-    console.log('incorrect press', this.incorrectPress);
+    this.cursor.style.display = 'none';
+
+    const endDisplay = document.getElementById('end-display');
+    const wordsChildren = document.querySelectorAll('.words > *');
+
+    endDisplay.classList.add('end');
+    for (const child of wordsChildren) {
+      child.classList.add('end');
+    }
 
     let correctPercent = calculatePercent(this.keypress, this.correctPress);
-    let incorrectPercent = calculatePercent(this.keypress, this.incorrectPress);
     let wpm = calculateWPM(this.gameLength, this.correctPress);
 
-    console.log('correct press percent', correctPercent);
-    console.log('incorrect press percent', incorrectPercent);
-    console.log('wpm', wpm);
-
-    this.cursor.style.display = 'none';
+    endDisplay.appendChild(
+      stringToHTML(
+        `<div class="flex items-center justify-center g-4"><span>Accuracy: <span>${correctPercent}%</span></span><span>|</span><span>WPM: <span>${wpm}</span></span></div>`,
+      ),
+    );
+    endDisplay.appendChild(
+      stringToHTML(`<button class="button secondary">reset</button>`),
+    );
   },
 };
 
