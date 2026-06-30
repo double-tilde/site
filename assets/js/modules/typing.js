@@ -1,109 +1,120 @@
-const game = {
-  playing: true,
-  // TODO: change to 30
-  countdown: 10,
-  intervalID: 0,
-  keypress: 0,
-  correctPress: 0,
-  incorrectPress: 0,
+export const game = {
+  playing: false,
+  countdown: null,
+  intervalID: null,
+  keypress: null,
+  correctPress: null,
+  incorrectPress: null,
 
   gameLength: null,
   cursor: null,
   timer: null,
   timerUnits: null,
+  words: null,
+  endDisplay: null,
 
-  words: [
-    'developer',
-    'philosophy',
-    'music',
-    'computer',
-    'tea',
-    'guitar',
-    'tennis',
-    'linux',
-    'reading',
-    'design',
-    'debate',
-    'technical',
-    'penguin',
-    'walk',
-    'morning',
-    'think',
-    'learn',
-    'do',
-    'listen',
-    'game',
-    'memory',
-    'explore',
-    'history',
-    'graphics',
-    'programming',
-    'terminal',
-    'vim',
-    'books',
-    'obsidian',
-    'notes',
-    'tutorials',
-    'conversation',
-    'audio',
-    'exercise',
-    'films',
-    'cats',
-    'typing',
-    'web',
-    'plugin',
-    'code',
-    'algorithms',
-    'go',
-    'custom',
-    'free',
-    'foss',
-    'keyboard',
-    'pedal',
-    'gym',
-    'laptop',
-    'source',
-    'build',
-    'internet',
-    'machine',
-    'theory',
-    'try',
-    'interest',
-    'css',
-    'aeons',
-    'neo',
-    'enjoy',
-    'travel',
-    'interface',
-    'focus',
-    'log',
-    'space',
-    'nebula',
-    'tech',
-    'program',
-    'crafting',
-    'cursor',
-    'distributed',
-    'static',
-    'shortcut',
-    'slice',
-    'macro',
-    'boilerplate',
-    'art',
-    'markdown',
-    'lazy',
-    'config',
-    'deploy',
-  ],
 
   init: function () {
+    this.playing = true;
+    // TODO: change to 30
+    this.countdown = 10;
+    this.intervalID = 0;
+    this.keypress = 0;
+    this.correctPress = 0;
+    this.incorrectPress = 0;
+
     this.cursor = document.getElementById('cursor');
     this.timer = document.getElementById('timer');
     this.timerUnits = document.getElementById('timer-units');
+    this.words = [
+      'developer',
+      'philosophy',
+      'music',
+      'computer',
+      'tea',
+      'guitar',
+      'tennis',
+      'linux',
+      'reading',
+      'design',
+      'debate',
+      'technical',
+      'penguin',
+      'walk',
+      'morning',
+      'think',
+      'learn',
+      'do',
+      'listen',
+      'game',
+      'memory',
+      'explore',
+      'history',
+      'graphics',
+      'programming',
+      'terminal',
+      'vim',
+      'books',
+      'obsidian',
+      'notes',
+      'tutorials',
+      'conversation',
+      'audio',
+      'exercise',
+      'films',
+      'cats',
+      'typing',
+      'web',
+      'plugin',
+      'code',
+      'algorithms',
+      'go',
+      'custom',
+      'free',
+      'foss',
+      'keyboard',
+      'pedal',
+      'gym',
+      'laptop',
+      'source',
+      'build',
+      'internet',
+      'machine',
+      'theory',
+      'try',
+      'interest',
+      'css',
+      'aeons',
+      'neo',
+      'enjoy',
+      'travel',
+      'interface',
+      'focus',
+      'log',
+      'space',
+      'nebula',
+      'tech',
+      'program',
+      'crafting',
+      'cursor',
+      'distributed',
+      'static',
+      'shortcut',
+      'slice',
+      'macro',
+      'boilerplate',
+      'art',
+      'markdown',
+      'lazy',
+      'config',
+      'deploy',
+    ];
 
     this.gameLength = this.countdown;
     this.timer.innerText = this.countdown;
     this.timerUnits.innerText = 'seconds';
+
+    this.endDisplay = document.getElementById('end-display');
   },
 
   startTimer: function () {
@@ -265,11 +276,9 @@ const game = {
 
   end: function () {
     this.cursor.style.display = 'none';
-
-    const endDisplay = document.getElementById('end-display');
     const wordsChildren = document.querySelectorAll('.words > *');
 
-    endDisplay.classList.add('end');
+    this.endDisplay.classList.add('end');
     for (const child of wordsChildren) {
       child.classList.add('end');
     }
@@ -277,14 +286,34 @@ const game = {
     let correctPercent = calculatePercent(this.keypress, this.correctPress);
     let wpm = calculateWPM(this.gameLength, this.correctPress);
 
-    endDisplay.appendChild(
+    this.endDisplay.appendChild(
       stringToHTML(
         `<div class="flex items-center justify-center g-4"><span>Accuracy: <span>${correctPercent}%</span></span><span>|</span><span>WPM: <span>${wpm}</span></span></div>`,
       ),
     );
-    endDisplay.appendChild(
-      stringToHTML(`<button class="button secondary">reset</button>`),
+    this.endDisplay.appendChild(
+      stringToHTML(
+        `<button class="button secondary" id="reset">reset</button>`,
+      ),
     );
+
+    const reset = document.getElementById('reset');
+    reset.addEventListener('click', () => {
+      this.reset();
+    });
+  },
+
+  reset: function () {
+    const wordsChildren = document.querySelectorAll('.words > *');
+    this.endDisplay.classList.remove('end');
+    for (const child of wordsChildren) {
+      child.classList.remove('end');
+    }
+
+    this.cursor.classList.add('cursor-throb');
+    this.cursor.style.left = '0px';
+    this.cursor.style.display = 'block';
+    typingGame();
   },
 };
 
@@ -293,13 +322,13 @@ export function typingGame() {
   const wordsDiv = document.querySelector('.words');
 
   if (page != null && wordsDiv != null) {
+    wordsDiv.innerHTML = '';
+
     game.init();
     game.shuffleWords();
     game.renderWords(wordsDiv);
     game.loop();
   }
-
-  //   init();
 }
 
 function stringToHTML(str) {
