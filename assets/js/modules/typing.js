@@ -1,4 +1,6 @@
-export const game = {
+import { text } from './typing-text.js';
+
+const game = {
   playing: false,
   countdown: null,
   intervalID: null,
@@ -11,8 +13,9 @@ export const game = {
   timer: null,
   timerUnits: null,
   words: null,
+  wordsContainer: null,
   endDisplay: null,
-
+  keyDownHandler: null,
 
   init: function () {
     this.playing = true;
@@ -26,89 +29,9 @@ export const game = {
     this.cursor = document.getElementById('cursor');
     this.timer = document.getElementById('timer');
     this.timerUnits = document.getElementById('timer-units');
-    this.words = [
-      'developer',
-      'philosophy',
-      'music',
-      'computer',
-      'tea',
-      'guitar',
-      'tennis',
-      'linux',
-      'reading',
-      'design',
-      'debate',
-      'technical',
-      'penguin',
-      'walk',
-      'morning',
-      'think',
-      'learn',
-      'do',
-      'listen',
-      'game',
-      'memory',
-      'explore',
-      'history',
-      'graphics',
-      'programming',
-      'terminal',
-      'vim',
-      'books',
-      'obsidian',
-      'notes',
-      'tutorials',
-      'conversation',
-      'audio',
-      'exercise',
-      'films',
-      'cats',
-      'typing',
-      'web',
-      'plugin',
-      'code',
-      'algorithms',
-      'go',
-      'custom',
-      'free',
-      'foss',
-      'keyboard',
-      'pedal',
-      'gym',
-      'laptop',
-      'source',
-      'build',
-      'internet',
-      'machine',
-      'theory',
-      'try',
-      'interest',
-      'css',
-      'aeons',
-      'neo',
-      'enjoy',
-      'travel',
-      'interface',
-      'focus',
-      'log',
-      'space',
-      'nebula',
-      'tech',
-      'program',
-      'crafting',
-      'cursor',
-      'distributed',
-      'static',
-      'shortcut',
-      'slice',
-      'macro',
-      'boilerplate',
-      'art',
-      'markdown',
-      'lazy',
-      'config',
-      'deploy',
-    ];
+    this.wordsContainer = document.querySelector('.words');
+
+    this.words = text;
 
     this.gameLength = this.countdown;
     this.timer.innerText = this.countdown;
@@ -144,29 +67,30 @@ export const game = {
     }
   },
 
-  renderWords: function (wordsDiv) {
+  renderWords: function () {
+    this.wordsContainer.innerHTML = '';
     for (const word of this.words) {
       const para = stringToHTML('<p>');
-      wordsDiv.appendChild(para);
-
+      this.wordsContainer.appendChild(para);
       for (const letter of word) {
         const span = stringToHTML(`<span>${letter}</span>`);
         para.appendChild(span);
       }
-
       const space = stringToHTML(`<span>&nbsp;</span>`);
       para.appendChild(space);
     }
-
-    this.words = wordsDiv;
   },
 
   loop: function () {
+    if (this.keyDownHandler) {
+      document.removeEventListener('keydown', this.keyDownHandler);
+    }
+
     let wordIdx = 0;
     let letterPos = 0;
     let topRowWords = [];
 
-    document.addEventListener('keydown', (event) => {
+    this.keyDownHandler = (event) => {
       if (event.key == 'Space') {
         event.preventDefault();
       }
@@ -190,7 +114,7 @@ export const game = {
           this.startTimer();
         }
 
-        let word = this.words.childNodes[wordIdx];
+        let word = this.wordsContainer.childNodes[wordIdx];
         let letter = word.childNodes[letterPos];
         let letterWidth = letter.offsetWidth;
         let cursorPosition = parseInt(this.cursor.style.left, 10) || 0;
@@ -198,14 +122,14 @@ export const game = {
         if (event.key == 'Backspace') {
           if (letterPos == 0 && wordIdx > 0) {
             wordIdx--;
-            word = this.words.childNodes[wordIdx];
+            word = this.wordsContainer.childNodes[wordIdx];
             letterPos = word.childNodes.length - 1;
           } else if (letterPos > 0) {
             letterPos--;
           } else {
             letterPos = 0;
           }
-          word = this.words.childNodes[wordIdx];
+          word = this.wordsContainer.childNodes[wordIdx];
           letter = word.childNodes[letterPos];
 
           if (cursorPosition > 0) {
@@ -215,7 +139,7 @@ export const game = {
           return;
         }
 
-        const nextWord = this.words.childNodes[wordIdx + 1];
+        const nextWord = this.wordsContainer.childNodes[wordIdx + 1];
         const topRowWord = word.offsetTop == 0;
         const nextRowWord = nextWord.offsetTop != 0;
         const lastLetterLastWord =
@@ -271,13 +195,16 @@ export const game = {
           letterPos++;
         }
       }
-    });
+    };
+
+    document.addEventListener('keydown', this.keyDownHandler);
   },
 
   end: function () {
     this.cursor.style.display = 'none';
     const wordsChildren = document.querySelectorAll('.words > *');
 
+    this.endDisplay.innerHTML = '';
     this.endDisplay.classList.add('end');
     for (const child of wordsChildren) {
       child.classList.add('end');
@@ -310,23 +237,23 @@ export const game = {
       child.classList.remove('end');
     }
 
+    this.wordsContainer.innerHTML = '';
     this.cursor.classList.add('cursor-throb');
     this.cursor.style.left = '0px';
     this.cursor.style.display = 'block';
-    typingGame();
+    this.init();
+    this.shuffleWords();
+    this.renderWords();
+    this.loop();
   },
 };
 
 export function typingGame() {
   const page = document.getElementById('typing');
-  const wordsDiv = document.querySelector('.words');
-
-  if (page != null && wordsDiv != null) {
-    wordsDiv.innerHTML = '';
-
+  if (page != null) {
     game.init();
     game.shuffleWords();
-    game.renderWords(wordsDiv);
+    game.renderWords();
     game.loop();
   }
 }
