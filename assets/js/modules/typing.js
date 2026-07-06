@@ -2,41 +2,42 @@ import { text } from './typing-text.js';
 
 const game = {
   playing: false,
+
   countdown: null,
   intervalID: null,
   keypress: null,
   correctPress: null,
   incorrectPress: null,
-
-  gameLength: null,
-  cursor: null,
   timer: null,
   timerUnits: null,
+
+  cursor: null,
   words: null,
   wordsContainer: null,
+
+  gameLength: null,
   endDisplay: null,
   keyDownHandler: null,
 
   init: function () {
     this.playing = true;
+
     // TODO: change to 30
     this.countdown = 10;
     this.intervalID = 0;
     this.keypress = 0;
     this.correctPress = 0;
     this.incorrectPress = 0;
-
-    this.cursor = document.getElementById('cursor');
     this.timer = document.getElementById('timer');
     this.timerUnits = document.getElementById('timer-units');
-    this.wordsContainer = document.querySelector('.words');
-
-    this.words = text;
-
-    this.gameLength = this.countdown;
     this.timer.innerText = this.countdown;
     this.timerUnits.innerText = 'seconds';
 
+    this.words = text;
+    this.cursor = document.getElementById('cursor');
+    this.wordsContainer = document.querySelector('.words');
+
+    this.gameLength = this.countdown;
     this.endDisplay = document.getElementById('end-display');
   },
 
