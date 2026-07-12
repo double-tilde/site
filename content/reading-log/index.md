@@ -12,7 +12,7 @@ I usually add longer articles here or articles that really intrigued me, rather 
 
 #### July
 
-- [A linkless internet - Collin Jennings](https://aeon.co/essays/when-ai-summaries-replace-hyperlinks-thought-itself-is-flattened) {{< info "essay" >}} {{< info "aeon" >}} {{< info "ai" >}} {{< info "information" >}})
+- [A linkless internet - Collin Jennings](https://aeon.co/essays/when-ai-summaries-replace-hyperlinks-thought-itself-is-flattened) {{< info "essay" >}} {{< info "aeon" >}} {{< info "ai" >}} {{< info "information" >}}
 
 #### June
 
