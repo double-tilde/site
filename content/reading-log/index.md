@@ -10,10 +10,14 @@ I usually add longer articles here or articles that really intrigued me, rather 
 
 ### 2026
 
+#### July
+
+- [A linkless internet - Collin Jennings](https://aeon.co/essays/when-ai-summaries-replace-hyperlinks-thought-itself-is-flattened) {{< info "essay" >}} {{< info "aeon" >}} {{< info "ai" >}} {{< info "information" >}})
+
 #### June
 
 - [Britain is wrong to ban speakers like Hasan Piker - Muzzled Britannia](https://www.economist.com/leaders/2026/06/02/britain-is-wrong-to-ban-speakers-like-hasan-piker) {{< info "article" >}} {{< info "the-economist" >}} {{< info "politics" >}} {{< info "free-speech" >}}
-- [Go evolves in the wrong direction - Aliaksandr Valialkin](https://aeon.co/essays/sure-ai-can-do-writing-but-memoir-not-so-much) {{< info "article" >}} {{< info "medium" >}} {{< info "go" >}} {{< info "generics" >}}
+- [Go evolves in the wrong direction - Aliaksandr Valialkin](https://itnext.io/go-evolves-in-the-wrong-direction-7dfda8a1a620) {{< info "article" >}} {{< info "medium" >}} {{< info "go" >}} {{< info "generics" >}}
 - [Computers can’t surprise - Richard Beard](https://aeon.co/essays/sure-ai-can-do-writing-but-memoir-not-so-much) {{< info "essay" >}} {{< info "aeon" >}} {{< info "ai" >}} {{< info "art" >}}
 
 #### May
