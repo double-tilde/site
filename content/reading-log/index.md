@@ -10,6 +10,12 @@ I usually add longer articles here or articles that really intrigued me, rather 
 
 ### 2026
 
+#### September
+
+- [Don't use the "C-word" - Matthew R Cooperberg](https://aeon.co/essays/we-need-a-better-way-to-describe-what-is-often-called-cancer) {{< info "essay" >}} {{< info "aeon" >}} {{< info "medicine" >}} {{< info "cancer" >}}
+- [AI made me doubt everything about programming - Felienne Hermans](https://www.youtube.com/watch?v=0-6-f94n_9M) {{< info "video" >}} {{< info "youtube" >}} {{< info "ddd-eu" >}} {{< info "ai" >}}
+- [A Severe Misalignment of AI in Mathematics - Math and AI](https://mathandai.org/) {{< info "letter" >}} {{< info "mathandai" >}} {{< info "ai" >}} {{< info "maths" >}}
+
 #### July
 
 - [A linkless internet - Collin Jennings](https://aeon.co/essays/when-ai-summaries-replace-hyperlinks-thought-itself-is-flattened) {{< info "essay" >}} {{< info "aeon" >}} {{< info "ai" >}} {{< info "information" >}}
