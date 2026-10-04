@@ -131,6 +131,12 @@ title = 'Double Tilde'
 
   [params.education]
     [[params.education.entry]]
+      title = "Unsupervised Machine Learning Certificate"
+      description = "Continuing my WatSPEED courses, I next moved to unsupervised machine learning. There were a few areas of focus, including dimensionality reduction, association rules, and clustering. I learnt how these unsupervised techniques help find hidden patterns in data, and the course helped me to comprehend how unlabelled data can still be analysed and used in various applications, from online shopping to banking."
+      date = "2026-07-17"
+      org = "University of Waterloo Watspeed"
+
+    [[params.education.entry]]
       title = "Supervised Machine Learning Certificate"
       description = "The second course I took via WatSPEED was focused on a specific area of machine learning. The supervised machine learning course was eight weeks and explored various techniques, including algorithms of regression (linear and logical) and classification (Naïve Bayes, k-NN), model performance, feature selection, tree-based methods and support vector machines. We then used these models in Python. Next, we compared the performance of the classification models and implemented various cross-validation techniques. We applied feature selection, shrinkage methods and support vector machines and learnt about the benefits of these different techniques. Finally, we applied tree-based methods to the regression and classification models. Learning about the specific area of supervised machine learning made ML feel more approachable as a whole."
       date = "2025-12-22"
