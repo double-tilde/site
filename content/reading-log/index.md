@@ -10,6 +10,10 @@ I usually add longer articles here or articles that really intrigued me, rather 
 
 ### 2026
 
+#### October
+
+- [Don't be a meat proxy - Niklas Gruhn](https://gruhn.me/blog/2026-08-03/) {{< info "post" >}} {{< info "blog" >}} {{< info "ai" >}} {{< info "information" >}}
+
 #### September
 
 - [Don't use the "C-word" - Matthew R Cooperberg](https://aeon.co/essays/we-need-a-better-way-to-describe-what-is-often-called-cancer) {{< info "essay" >}} {{< info "aeon" >}} {{< info "medicine" >}} {{< info "cancer" >}}
