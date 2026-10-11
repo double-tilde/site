@@ -12,6 +12,7 @@ I usually add longer articles here or articles that really intrigued me, rather 
 
 #### October
 
+- [I Deliberately Bet Like a Problem Gambler.I Deliberately Bet Like a Problem Gambler - DraftKings Made Me a VIP.](https://www.propublica.org/article/draftkings-sports-gambling-problem-vip-fanduel) {{< info "article" >}} {{< info "propublica" >}} {{< info "gambling" >}} {{< info "technology" >}}
 - [Don't be a meat proxy - Niklas Gruhn](https://gruhn.me/blog/2026-08-03/) {{< info "post" >}} {{< info "blog" >}} {{< info "ai" >}} {{< info "information" >}}
 
 #### September
