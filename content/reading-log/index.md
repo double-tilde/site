@@ -12,6 +12,7 @@ I usually add longer articles here or articles that really intrigued me, rather 
 
 #### October
 
+- [America Is Now an Ally of Russia - Tom Nichols](https://www.theatlantic.com/ideas/2026/10/america-now-ally-russia/689066/) {{< info "article" >}} {{< info "the-atlantic" >}} {{< info "politics" >}} {{< info "usa" >}}
 - [Is everything conscious? - Sam Kimpton-Nye](https://aeon.co/essays/does-the-principle-of-sufficient-reason-make-panpsychism-true) {{< info "essay" >}} {{< info "aeon" >}} {{< info "philosophy" >}} {{< info "metaphysics" >}}
 - [I Deliberately Bet Like a Problem Gambler - DraftKings Made Me a VIP. - Jake Pearson](https://www.propublica.org/article/draftkings-sports-gambling-problem-vip-fanduel) {{< info "article" >}} {{< info "propublica" >}} {{< info "gambling" >}} {{< info "technology" >}}
 - [Don't be a meat proxy - Niklas Gruhn](https://gruhn.me/blog/2026-08-03/) {{< info "post" >}} {{< info "blog" >}} {{< info "ai" >}} {{< info "information" >}}
