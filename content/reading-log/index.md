@@ -12,6 +12,7 @@ I usually add longer articles here or articles that really intrigued me, rather 
 
 #### October
 
+- [Today's PHP Security Release, and How We're Strengthening PHP Security - The PHP Foundation](https://thephp.foundation/blog/2026/10/21/todays-php-security-release-and-how-were-strengthening-php-security/) {{< info "article" >}} {{< info "php-foundation" >}} {{< info "security" >}} {{< info "ai" >}}
 - [America Is Now an Ally of Russia - Tom Nichols](https://www.theatlantic.com/ideas/2026/10/america-now-ally-russia/689066/) {{< info "article" >}} {{< info "the-atlantic" >}} {{< info "politics" >}} {{< info "usa" >}}
 - [Is everything conscious? - Sam Kimpton-Nye](https://aeon.co/essays/does-the-principle-of-sufficient-reason-make-panpsychism-true) {{< info "essay" >}} {{< info "aeon" >}} {{< info "philosophy" >}} {{< info "metaphysics" >}}
 - [I Deliberately Bet Like a Problem Gambler - DraftKings Made Me a VIP. - Jake Pearson](https://www.propublica.org/article/draftkings-sports-gambling-problem-vip-fanduel) {{< info "article" >}} {{< info "propublica" >}} {{< info "gambling" >}} {{< info "technology" >}}
